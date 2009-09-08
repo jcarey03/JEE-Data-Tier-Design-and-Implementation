@@ -1,0 +1,1197 @@
+14:14:24,493  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:24,805  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5dd582: display name [org.springframework.context.support.ClassPathXmlApplicationContext@5dd582]; startup date [Sat Sep 05 14:14:24 EDT 2009]; root of context hierarchy
+14:14:24,868  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+14:14:24,977  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@5dd582]: org.springframework.beans.factory.support.DefaultListableBeanFactory@542529
+14:14:24,993  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@542529: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate]; root of factory hierarchy
+14:14:25,039  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+14:14:25,102 DEBUG Connection:27 - {conn-100000} Connection
+14:14:25,133 DEBUG Connection:27 - {conn-100000} Preparing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:25,180 DEBUG PreparedStatement:27 - {pstm-100001} Executing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:25,180 DEBUG PreparedStatement:27 - {pstm-100001} Parameters: []
+14:14:25,196 DEBUG PreparedStatement:27 - {pstm-100001} Types: []
+14:14:25,196 DEBUG ResultSet:27 - {rset-100002} ResultSet
+14:14:25,211 DEBUG ResultSet:27 - {rset-100002} Header: [ID]
+14:14:25,211 DEBUG ResultSet:27 - {rset-100002} Result: [1054]
+14:14:25,211 DEBUG Connection:27 - {conn-100000} Preparing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:25,211 DEBUG PreparedStatement:27 - {pstm-100003} Executing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:25,211 DEBUG PreparedStatement:27 - {pstm-100003} Parameters: [1054, Test, User, null]
+14:14:25,211 DEBUG PreparedStatement:27 - {pstm-100003} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+14:14:25,227 DEBUG Connection:27 - {conn-100004} Connection
+14:14:25,227 DEBUG Connection:27 - {conn-100004} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:25,274 DEBUG PreparedStatement:27 - {pstm-100005} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:25,274 DEBUG PreparedStatement:27 - {pstm-100005} Parameters: [1054]
+14:14:25,274 DEBUG PreparedStatement:27 - {pstm-100005} Types: [java.lang.Long]
+14:14:25,274 DEBUG ResultSet:27 - {rset-100006} ResultSet
+14:14:25,274 DEBUG ResultSet:27 - {rset-100006} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:25,274 DEBUG ResultSet:27 - {rset-100006} Result: [1054, Test, User, null]
+14:14:25,368  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:25,461  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15e2075: display name [org.springframework.context.support.ClassPathXmlApplicationContext@15e2075]; startup date [Sat Sep 05 14:14:25 EDT 2009]; root of context hierarchy
+14:14:25,461  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+14:14:25,493  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@15e2075]: org.springframework.beans.factory.support.DefaultListableBeanFactory@d24e3f
+14:14:25,493  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@d24e3f: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate]; root of factory hierarchy
+14:14:25,493  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+14:14:25,555 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+14:14:25,571 DEBUG Connection:27 - {conn-100007} Connection
+14:14:25,571 DEBUG Connection:27 - {conn-100007} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:25,618 DEBUG PreparedStatement:27 - {pstm-100008} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:25,618 DEBUG PreparedStatement:27 - {pstm-100008} Parameters: [1]
+14:14:25,618 DEBUG PreparedStatement:27 - {pstm-100008} Types: [java.lang.Long]
+14:14:25,618 DEBUG ResultSet:27 - {rset-100009} ResultSet
+14:14:25,618 DEBUG ResultSet:27 - {rset-100009} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:25,618 DEBUG ResultSet:27 - {rset-100009} Result: [1, Jason, Carey, A]
+14:14:25,680  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:25,743  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1eb0: display name [org.springframework.context.support.ClassPathXmlApplicationContext@1eb0]; startup date [Sat Sep 05 14:14:25 EDT 2009]; root of context hierarchy
+14:14:25,743  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+14:14:25,758  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@1eb0]: org.springframework.beans.factory.support.DefaultListableBeanFactory@b3319f
+14:14:25,758  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b3319f: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate]; root of factory hierarchy
+14:14:25,758  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+14:14:25,789 DEBUG Connection:27 - {conn-100010} Connection
+14:14:25,789 DEBUG Connection:27 - {conn-100010} Preparing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:25,821 DEBUG PreparedStatement:27 - {pstm-100011} Executing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:25,821 DEBUG PreparedStatement:27 - {pstm-100011} Parameters: []
+14:14:25,821 DEBUG PreparedStatement:27 - {pstm-100011} Types: []
+14:14:25,821 DEBUG ResultSet:27 - {rset-100012} ResultSet
+14:14:25,821 DEBUG ResultSet:27 - {rset-100012} Header: [ID]
+14:14:25,836 DEBUG ResultSet:27 - {rset-100012} Result: [1055]
+14:14:25,836 DEBUG Connection:27 - {conn-100010} Preparing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:25,836 DEBUG PreparedStatement:27 - {pstm-100013} Executing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:25,836 DEBUG PreparedStatement:27 - {pstm-100013} Parameters: [1055, Test, User, null]
+14:14:25,836 DEBUG PreparedStatement:27 - {pstm-100013} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+14:14:25,836 DEBUG Connection:27 - {conn-100014} Connection
+14:14:25,836 DEBUG Connection:27 - {conn-100014} Preparing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+14:14:25,883 DEBUG PreparedStatement:27 - {pstm-100015} Executing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+14:14:25,883 DEBUG PreparedStatement:27 - {pstm-100015} Parameters: [New First Name, User, null, 1055]
+14:14:25,883 DEBUG PreparedStatement:27 - {pstm-100015} Types: [java.lang.String, java.lang.String, null, java.lang.Long]
+14:14:25,883 DEBUG Connection:27 - {conn-100016} Connection
+14:14:25,883 DEBUG Connection:27 - {conn-100016} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:25,930 DEBUG PreparedStatement:27 - {pstm-100017} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:25,930 DEBUG PreparedStatement:27 - {pstm-100017} Parameters: [1055]
+14:14:25,930 DEBUG PreparedStatement:27 - {pstm-100017} Types: [java.lang.Long]
+14:14:25,930 DEBUG ResultSet:27 - {rset-100018} ResultSet
+14:14:25,930 DEBUG ResultSet:27 - {rset-100018} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:25,930 DEBUG ResultSet:27 - {rset-100018} Result: [1055, New First Name, User, null]
+14:14:25,993  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:26,039  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@129b0e1: display name [org.springframework.context.support.ClassPathXmlApplicationContext@129b0e1]; startup date [Sat Sep 05 14:14:26 EDT 2009]; root of context hierarchy
+14:14:26,039  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+14:14:26,055  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@129b0e1]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1202d69
+14:14:26,055  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1202d69: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate]; root of factory hierarchy
+14:14:26,071  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+14:14:26,086 DEBUG Connection:27 - {conn-100019} Connection
+14:14:26,086 DEBUG Connection:27 - {conn-100019} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:26,133 DEBUG PreparedStatement:27 - {pstm-100020} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:26,133 DEBUG PreparedStatement:27 - {pstm-100020} Parameters: [1]
+14:14:26,133 DEBUG PreparedStatement:27 - {pstm-100020} Types: [java.lang.Long]
+14:14:26,133 DEBUG ResultSet:27 - {rset-100021} ResultSet
+14:14:26,133 DEBUG ResultSet:27 - {rset-100021} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:26,133 DEBUG ResultSet:27 - {rset-100021} Result: [1, Jason, Carey, A]
+14:14:26,133 DEBUG Connection:27 - {conn-100022} Connection
+14:14:26,133 DEBUG Connection:27 - {conn-100022} Preparing Statement:    DELETE CONTACT WHERE ID = ?     
+14:14:26,180 DEBUG PreparedStatement:27 - {pstm-100023} Executing Statement:    DELETE CONTACT WHERE ID = ?     
+14:14:26,180 DEBUG PreparedStatement:27 - {pstm-100023} Parameters: [1]
+14:14:26,180 DEBUG PreparedStatement:27 - {pstm-100023} Types: [java.lang.Long]
+14:14:26,180 DEBUG Connection:27 - {conn-100024} Connection
+14:14:26,180 DEBUG Connection:27 - {conn-100024} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:26,227 DEBUG PreparedStatement:27 - {pstm-100025} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:26,227 DEBUG PreparedStatement:27 - {pstm-100025} Parameters: [1]
+14:14:26,227 DEBUG PreparedStatement:27 - {pstm-100025} Types: [java.lang.Long]
+14:14:26,227 DEBUG ResultSet:27 - {rset-100026} ResultSet
+14:14:26,227 DEBUG Connection:27 - {conn-100027} Connection
+14:14:26,227 DEBUG Connection:27 - {conn-100027} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:26,274 DEBUG PreparedStatement:27 - {pstm-100028} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:26,274 DEBUG PreparedStatement:27 - {pstm-100028} Parameters: [1]
+14:14:26,274 DEBUG PreparedStatement:27 - {pstm-100028} Types: [java.lang.Long]
+14:14:26,274 DEBUG ResultSet:27 - {rset-100029} ResultSet
+14:14:26,368  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:26,414 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+14:14:26,414 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+14:14:26,414 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+14:14:26,508 DEBUG SimpleDataSource:27 - Created connection 31952022.
+14:14:26,508 DEBUG Connection:27 - {conn-100030} Connection
+14:14:26,508 DEBUG Connection:27 - {conn-100030} Preparing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:26,508 DEBUG PreparedStatement:27 - {pstm-100031} Executing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:26,508 DEBUG PreparedStatement:27 - {pstm-100031} Parameters: []
+14:14:26,524 DEBUG PreparedStatement:27 - {pstm-100031} Types: []
+14:14:26,524 DEBUG ResultSet:27 - {rset-100032} ResultSet
+14:14:26,524 DEBUG ResultSet:27 - {rset-100032} Header: [ID]
+14:14:26,524 DEBUG ResultSet:27 - {rset-100032} Result: [1056]
+14:14:26,524 DEBUG Connection:27 - {conn-100030} Preparing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:26,524 DEBUG PreparedStatement:27 - {pstm-100033} Executing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:26,524 DEBUG PreparedStatement:27 - {pstm-100033} Parameters: [1056, Test, User, null]
+14:14:26,524 DEBUG PreparedStatement:27 - {pstm-100033} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+14:14:26,524 DEBUG SimpleDataSource:27 - Returned connection 31952022 to pool.
+14:14:26,524 DEBUG SimpleDataSource:27 - Checked out connection 31952022 from pool.
+14:14:26,524 DEBUG Connection:27 - {conn-100034} Connection
+14:14:26,524 DEBUG Connection:27 - {conn-100034} Preparing Statement:    INSERT INTO STUDENT (     ID,     MAJOR      ) VALUES (     ?,     ?   )  
+14:14:26,524 DEBUG PreparedStatement:27 - {pstm-100035} Executing Statement:    INSERT INTO STUDENT (     ID,     MAJOR      ) VALUES (     ?,     ?   )  
+14:14:26,524 DEBUG PreparedStatement:27 - {pstm-100035} Parameters: [1056, English]
+14:14:26,524 DEBUG PreparedStatement:27 - {pstm-100035} Types: [java.lang.Long, java.lang.String]
+14:14:26,539 DEBUG SimpleDataSource:27 - Returned connection 31952022 to pool.
+14:14:26,539 DEBUG SimpleDataSource:27 - Checked out connection 31952022 from pool.
+14:14:26,539 DEBUG Connection:27 - {conn-100036} Connection
+14:14:26,539 DEBUG Connection:27 - {conn-100036} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:26,539 DEBUG PreparedStatement:27 - {pstm-100037} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:26,539 DEBUG PreparedStatement:27 - {pstm-100037} Parameters: [1056]
+14:14:26,539 DEBUG PreparedStatement:27 - {pstm-100037} Types: [java.lang.Long]
+14:14:26,539 DEBUG ResultSet:27 - {rset-100038} ResultSet
+14:14:26,539 DEBUG ResultSet:27 - {rset-100038} Header: [ID, FIRST_NAME, LAST_NAME, MIDDLE_INITIAL, ID, MAJOR]
+14:14:26,539 DEBUG ResultSet:27 - {rset-100038} Result: [1056, Test, User, null, 1056, English]
+14:14:26,539 DEBUG SimpleDataSource:27 - Returned connection 31952022 to pool.
+14:14:26,602  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:26,711 DEBUG SimpleDataSource:27 - Created connection 2737550.
+14:14:26,711 DEBUG Connection:27 - {conn-100039} Connection
+14:14:26,711 DEBUG Connection:27 - {conn-100039} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:26,711 DEBUG PreparedStatement:27 - {pstm-100040} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:26,711 DEBUG PreparedStatement:27 - {pstm-100040} Parameters: [1]
+14:14:26,711 DEBUG PreparedStatement:27 - {pstm-100040} Types: [java.lang.Long]
+14:14:26,711 DEBUG ResultSet:27 - {rset-100041} ResultSet
+14:14:26,711 DEBUG ResultSet:27 - {rset-100041} Header: [ID, FIRST_NAME, LAST_NAME, MIDDLE_INITIAL, ID, MAJOR]
+14:14:26,711 DEBUG ResultSet:27 - {rset-100041} Result: [1, Jason, Carey, A, 1, null]
+14:14:26,711 DEBUG SimpleDataSource:27 - Returned connection 2737550 to pool.
+14:14:26,774  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:26,868 DEBUG SimpleDataSource:27 - Created connection 672904.
+14:14:26,868 DEBUG Connection:27 - {conn-100042} Connection
+14:14:26,868 DEBUG Connection:27 - {conn-100042} Preparing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:26,868 DEBUG PreparedStatement:27 - {pstm-100043} Executing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:26,868 DEBUG PreparedStatement:27 - {pstm-100043} Parameters: []
+14:14:26,868 DEBUG PreparedStatement:27 - {pstm-100043} Types: []
+14:14:26,868 DEBUG ResultSet:27 - {rset-100044} ResultSet
+14:14:26,868 DEBUG ResultSet:27 - {rset-100044} Header: [ID]
+14:14:26,868 DEBUG ResultSet:27 - {rset-100044} Result: [1057]
+14:14:26,868 DEBUG Connection:27 - {conn-100042} Preparing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:26,868 DEBUG PreparedStatement:27 - {pstm-100045} Executing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:26,868 DEBUG PreparedStatement:27 - {pstm-100045} Parameters: [1057, Test, User, null]
+14:14:26,868 DEBUG PreparedStatement:27 - {pstm-100045} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+14:14:26,868 DEBUG SimpleDataSource:27 - Returned connection 672904 to pool.
+14:14:26,868 DEBUG SimpleDataSource:27 - Checked out connection 672904 from pool.
+14:14:26,883 DEBUG Connection:27 - {conn-100046} Connection
+14:14:26,883 DEBUG Connection:27 - {conn-100046} Preparing Statement:    INSERT INTO STUDENT (     ID,     MAJOR      ) VALUES (     ?,     ?   )  
+14:14:26,883 DEBUG PreparedStatement:27 - {pstm-100047} Executing Statement:    INSERT INTO STUDENT (     ID,     MAJOR      ) VALUES (     ?,     ?   )  
+14:14:26,883 DEBUG PreparedStatement:27 - {pstm-100047} Parameters: [1057, Cool Major]
+14:14:26,883 DEBUG PreparedStatement:27 - {pstm-100047} Types: [java.lang.Long, java.lang.String]
+14:14:26,883 DEBUG SimpleDataSource:27 - Returned connection 672904 to pool.
+14:14:26,883 DEBUG SimpleDataSource:27 - Checked out connection 672904 from pool.
+14:14:26,883 DEBUG Connection:27 - {conn-100048} Connection
+14:14:26,883 DEBUG Connection:27 - {conn-100048} Preparing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+14:14:26,883 DEBUG PreparedStatement:27 - {pstm-100049} Executing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+14:14:26,883 DEBUG PreparedStatement:27 - {pstm-100049} Parameters: [New First Name, User, null, 1057]
+14:14:26,883 DEBUG PreparedStatement:27 - {pstm-100049} Types: [java.lang.String, java.lang.String, null, java.lang.Long]
+14:14:26,899 DEBUG SimpleDataSource:27 - Returned connection 672904 to pool.
+14:14:26,899 DEBUG SimpleDataSource:27 - Checked out connection 672904 from pool.
+14:14:26,899 DEBUG Connection:27 - {conn-100050} Connection
+14:14:26,899 DEBUG Connection:27 - {conn-100050} Preparing Statement:    UPDATE STUDENT SET     MAJOR = ?   WHERE ID = ?     
+14:14:26,899 DEBUG PreparedStatement:27 - {pstm-100051} Executing Statement:    UPDATE STUDENT SET     MAJOR = ?   WHERE ID = ?     
+14:14:26,899 DEBUG PreparedStatement:27 - {pstm-100051} Parameters: [Really Cool Major, 1057]
+14:14:26,899 DEBUG PreparedStatement:27 - {pstm-100051} Types: [java.lang.String, java.lang.Long]
+14:14:26,899 DEBUG SimpleDataSource:27 - Returned connection 672904 to pool.
+14:14:26,899 DEBUG SimpleDataSource:27 - Checked out connection 672904 from pool.
+14:14:26,899 DEBUG Connection:27 - {conn-100052} Connection
+14:14:26,899 DEBUG Connection:27 - {conn-100052} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:26,899 DEBUG PreparedStatement:27 - {pstm-100053} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:26,899 DEBUG PreparedStatement:27 - {pstm-100053} Parameters: [1057]
+14:14:26,899 DEBUG PreparedStatement:27 - {pstm-100053} Types: [java.lang.Long]
+14:14:26,899 DEBUG ResultSet:27 - {rset-100054} ResultSet
+14:14:26,899 DEBUG ResultSet:27 - {rset-100054} Header: [ID, FIRST_NAME, LAST_NAME, MIDDLE_INITIAL, ID, MAJOR]
+14:14:26,899 DEBUG ResultSet:27 - {rset-100054} Result: [1057, New First Name, User, null, 1057, Really Cool Major]
+14:14:26,899 DEBUG SimpleDataSource:27 - Returned connection 672904 to pool.
+14:14:26,961  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:27,055 DEBUG SimpleDataSource:27 - Created connection 2355643.
+14:14:27,055 DEBUG Connection:27 - {conn-100055} Connection
+14:14:27,055 DEBUG Connection:27 - {conn-100055} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:27,055 DEBUG PreparedStatement:27 - {pstm-100056} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:27,055 DEBUG PreparedStatement:27 - {pstm-100056} Parameters: [1]
+14:14:27,055 DEBUG PreparedStatement:27 - {pstm-100056} Types: [java.lang.Long]
+14:14:27,055 DEBUG ResultSet:27 - {rset-100057} ResultSet
+14:14:27,055 DEBUG ResultSet:27 - {rset-100057} Header: [ID, FIRST_NAME, LAST_NAME, MIDDLE_INITIAL, ID, MAJOR]
+14:14:27,055 DEBUG ResultSet:27 - {rset-100057} Result: [1, Jason, Carey, A, 1, null]
+14:14:27,071 DEBUG SimpleDataSource:27 - Returned connection 2355643 to pool.
+14:14:27,071 DEBUG SimpleDataSource:27 - Checked out connection 2355643 from pool.
+14:14:27,071 DEBUG Connection:27 - {conn-100058} Connection
+14:14:27,071 DEBUG Connection:27 - {conn-100058} Preparing Statement:    DELETE STUDENT WHERE ID = ?     
+14:14:27,071 DEBUG PreparedStatement:27 - {pstm-100059} Executing Statement:    DELETE STUDENT WHERE ID = ?     
+14:14:27,071 DEBUG PreparedStatement:27 - {pstm-100059} Parameters: [1]
+14:14:27,071 DEBUG PreparedStatement:27 - {pstm-100059} Types: [java.lang.Long]
+14:14:27,071 DEBUG SimpleDataSource:27 - Returned connection 2355643 to pool.
+14:14:27,071 DEBUG SimpleDataSource:27 - Checked out connection 2355643 from pool.
+14:14:27,071 DEBUG Connection:27 - {conn-100060} Connection
+14:14:27,071 DEBUG Connection:27 - {conn-100060} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:27,071 DEBUG PreparedStatement:27 - {pstm-100061} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:27,071 DEBUG PreparedStatement:27 - {pstm-100061} Parameters: [1]
+14:14:27,071 DEBUG PreparedStatement:27 - {pstm-100061} Types: [java.lang.Long]
+14:14:27,071 DEBUG ResultSet:27 - {rset-100062} ResultSet
+14:14:27,071 DEBUG SimpleDataSource:27 - Returned connection 2355643 to pool.
+14:14:27,149  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:27,274  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@df0438: display name [org.springframework.context.support.ClassPathXmlApplicationContext@df0438]; startup date [Sat Sep 05 14:14:27 EDT 2009]; root of context hierarchy
+14:14:27,274  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+14:14:27,305  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [appctx-datatier-test.xml]
+14:14:27,305  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@df0438]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1ad6b4b
+14:14:27,321  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1ad6b4b: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate,contactDao,studentDao]; root of factory hierarchy
+14:14:27,321  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+14:14:27,352 DEBUG Connection:27 - {conn-100063} Connection
+14:14:27,352 DEBUG Connection:27 - {conn-100063} Preparing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:27,399 DEBUG PreparedStatement:27 - {pstm-100064} Executing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:27,399 DEBUG PreparedStatement:27 - {pstm-100064} Parameters: []
+14:14:27,399 DEBUG PreparedStatement:27 - {pstm-100064} Types: []
+14:14:27,399 DEBUG ResultSet:27 - {rset-100065} ResultSet
+14:14:27,399 DEBUG ResultSet:27 - {rset-100065} Header: [ID]
+14:14:27,399 DEBUG ResultSet:27 - {rset-100065} Result: [1058]
+14:14:27,399 DEBUG Connection:27 - {conn-100063} Preparing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:27,399 DEBUG PreparedStatement:27 - {pstm-100066} Executing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:27,399 DEBUG PreparedStatement:27 - {pstm-100066} Parameters: [1058, Test, User, null]
+14:14:27,399 DEBUG PreparedStatement:27 - {pstm-100066} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+14:14:27,414 DEBUG Connection:27 - {conn-100067} Connection
+14:14:27,414 DEBUG Connection:27 - {conn-100067} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:27,446 DEBUG PreparedStatement:27 - {pstm-100068} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:27,446 DEBUG PreparedStatement:27 - {pstm-100068} Parameters: [1058]
+14:14:27,446 DEBUG PreparedStatement:27 - {pstm-100068} Types: [java.lang.Long]
+14:14:27,461 DEBUG ResultSet:27 - {rset-100069} ResultSet
+14:14:27,461 DEBUG ResultSet:27 - {rset-100069} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:27,461 DEBUG ResultSet:27 - {rset-100069} Result: [1058, Test, User, null]
+14:14:27,508  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:27,774  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@93df2c: display name [org.springframework.context.support.ClassPathXmlApplicationContext@93df2c]; startup date [Sat Sep 05 14:14:27 EDT 2009]; root of context hierarchy
+14:14:27,774  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+14:14:27,805  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [appctx-datatier-test.xml]
+14:14:27,805  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@93df2c]: org.springframework.beans.factory.support.DefaultListableBeanFactory@18e4327
+14:14:27,883 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+14:14:27,883  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@18e4327: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate,contactDao,studentDao]; root of factory hierarchy
+14:14:27,883  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+14:14:27,899 DEBUG Connection:27 - {conn-100070} Connection
+14:14:27,899 DEBUG Connection:27 - {conn-100070} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:27,930 DEBUG PreparedStatement:27 - {pstm-100071} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:27,946 DEBUG PreparedStatement:27 - {pstm-100071} Parameters: [1]
+14:14:27,946 DEBUG PreparedStatement:27 - {pstm-100071} Types: [java.lang.Long]
+14:14:27,946 DEBUG ResultSet:27 - {rset-100072} ResultSet
+14:14:27,946 DEBUG ResultSet:27 - {rset-100072} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:27,946 DEBUG ResultSet:27 - {rset-100072} Result: [1, Jason, Carey, A]
+14:14:28,008  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:28,118  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f6f27b: display name [org.springframework.context.support.ClassPathXmlApplicationContext@1f6f27b]; startup date [Sat Sep 05 14:14:28 EDT 2009]; root of context hierarchy
+14:14:28,118  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+14:14:28,133  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [appctx-datatier-test.xml]
+14:14:28,149  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@1f6f27b]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1367e28
+14:14:28,149  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1367e28: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate,contactDao,studentDao]; root of factory hierarchy
+14:14:28,149  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+14:14:28,164 DEBUG Connection:27 - {conn-100073} Connection
+14:14:28,164 DEBUG Connection:27 - {conn-100073} Preparing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:28,196 DEBUG PreparedStatement:27 - {pstm-100074} Executing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:28,211 DEBUG PreparedStatement:27 - {pstm-100074} Parameters: []
+14:14:28,211 DEBUG PreparedStatement:27 - {pstm-100074} Types: []
+14:14:28,211 DEBUG ResultSet:27 - {rset-100075} ResultSet
+14:14:28,211 DEBUG ResultSet:27 - {rset-100075} Header: [ID]
+14:14:28,211 DEBUG ResultSet:27 - {rset-100075} Result: [1059]
+14:14:28,211 DEBUG Connection:27 - {conn-100073} Preparing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:28,211 DEBUG PreparedStatement:27 - {pstm-100076} Executing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:28,211 DEBUG PreparedStatement:27 - {pstm-100076} Parameters: [1059, Test, User, null]
+14:14:28,211 DEBUG PreparedStatement:27 - {pstm-100076} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+14:14:28,211 DEBUG Connection:27 - {conn-100077} Connection
+14:14:28,211 DEBUG Connection:27 - {conn-100077} Preparing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+14:14:28,258 DEBUG PreparedStatement:27 - {pstm-100078} Executing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+14:14:28,258 DEBUG PreparedStatement:27 - {pstm-100078} Parameters: [New First Name, User, null, 1059]
+14:14:28,258 DEBUG PreparedStatement:27 - {pstm-100078} Types: [java.lang.String, java.lang.String, null, java.lang.Long]
+14:14:28,258 DEBUG Connection:27 - {conn-100079} Connection
+14:14:28,258 DEBUG Connection:27 - {conn-100079} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:28,305 DEBUG PreparedStatement:27 - {pstm-100080} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:28,305 DEBUG PreparedStatement:27 - {pstm-100080} Parameters: [1059]
+14:14:28,305 DEBUG PreparedStatement:27 - {pstm-100080} Types: [java.lang.Long]
+14:14:28,305 DEBUG ResultSet:27 - {rset-100081} ResultSet
+14:14:28,305 DEBUG ResultSet:27 - {rset-100081} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:28,305 DEBUG ResultSet:27 - {rset-100081} Result: [1059, New First Name, User, null]
+14:14:28,368  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:28,399  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@145e2d5: display name [org.springframework.context.support.ClassPathXmlApplicationContext@145e2d5]; startup date [Sat Sep 05 14:14:28 EDT 2009]; root of context hierarchy
+14:14:28,399  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+14:14:28,414  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [appctx-datatier-test.xml]
+14:14:28,461 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+14:14:28,461 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+14:14:28,493  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@145e2d5]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1de498
+14:14:28,493  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1de498: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate,contactDao,studentDao]; root of factory hierarchy
+14:14:28,493  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+14:14:28,493 DEBUG Connection:27 - {conn-100082} Connection
+14:14:28,493 DEBUG Connection:27 - {conn-100082} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:28,524 DEBUG PreparedStatement:27 - {pstm-100083} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:28,524 DEBUG PreparedStatement:27 - {pstm-100083} Parameters: [1]
+14:14:28,524 DEBUG PreparedStatement:27 - {pstm-100083} Types: [java.lang.Long]
+14:14:28,539 DEBUG ResultSet:27 - {rset-100084} ResultSet
+14:14:28,539 DEBUG ResultSet:27 - {rset-100084} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:28,539 DEBUG ResultSet:27 - {rset-100084} Result: [1, Jason, Carey, A]
+14:14:28,539 DEBUG Connection:27 - {conn-100085} Connection
+14:14:28,539 DEBUG Connection:27 - {conn-100085} Preparing Statement:    DELETE CONTACT WHERE ID = ?     
+14:14:28,571 DEBUG PreparedStatement:27 - {pstm-100086} Executing Statement:    DELETE CONTACT WHERE ID = ?     
+14:14:28,571 DEBUG PreparedStatement:27 - {pstm-100086} Parameters: [1]
+14:14:28,571 DEBUG PreparedStatement:27 - {pstm-100086} Types: [java.lang.Long]
+14:14:28,586 DEBUG Connection:27 - {conn-100087} Connection
+14:14:28,586 DEBUG Connection:27 - {conn-100087} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:28,618 DEBUG PreparedStatement:27 - {pstm-100088} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:28,633 DEBUG PreparedStatement:27 - {pstm-100088} Parameters: [1]
+14:14:28,633 DEBUG PreparedStatement:27 - {pstm-100088} Types: [java.lang.Long]
+14:14:28,633 DEBUG ResultSet:27 - {rset-100089} ResultSet
+14:14:28,633 DEBUG Connection:27 - {conn-100090} Connection
+14:14:28,633 DEBUG Connection:27 - {conn-100090} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:28,664 DEBUG PreparedStatement:27 - {pstm-100091} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:28,664 DEBUG PreparedStatement:27 - {pstm-100091} Parameters: [1]
+14:14:28,664 DEBUG PreparedStatement:27 - {pstm-100091} Types: [java.lang.Long]
+14:14:28,664 DEBUG ResultSet:27 - {rset-100092} ResultSet
+14:14:28,743  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:28,821  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+14:14:28,821  INFO Environment:543 - Hibernate 3.3.1.GA
+14:14:28,836  INFO Environment:576 - hibernate.properties not found
+14:14:28,836  INFO Environment:709 - Bytecode provider name : javassist
+14:14:28,836  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+14:14:28,899  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+14:14:28,899  INFO Version:16 - Hibernate EntityManager 3.4.0.GA
+14:14:28,993  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:28,993  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:29,039  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:29,102  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:29,133  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:29,180  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:29,180  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:29,196  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:29,211  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:29,258  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:29,258  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:29,258  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+14:14:29,258  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:29,258  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****, autocommit=true, release_mode=auto}
+14:14:29,305  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:29,305  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:29,321  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:29,321  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+14:14:29,321  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:29,321  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:29,321  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:29,336  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:29,336  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:29,336  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:29,336  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:29,336  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:29,336  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:29,336  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:29,336  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:29,336  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:29,336  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:29,336  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:29,336  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:29,336  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:29,336  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+14:14:29,336  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:29,336  INFO SettingsFactory:266 - Query cache: disabled
+14:14:29,336  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:29,336  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:29,336  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:29,336  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:29,352  INFO SettingsFactory:314 - Statistics: disabled
+14:14:29,352  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:29,352  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:29,352  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:29,383  INFO SessionFactoryImpl:187 - building session factory
+14:14:29,524  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:29,633  INFO SessionFactoryImpl:805 - closing
+14:14:29,633  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:29,696  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:29,758  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:29,758  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:29,758  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:29,758  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:29,758  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:29,758  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:29,758  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:29,774  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:29,774  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:29,774  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:29,774  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:29,774  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+14:14:29,774  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:29,774  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****, autocommit=true, release_mode=auto}
+14:14:29,821  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:29,821  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:29,821  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:29,821  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+14:14:29,821  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:29,821  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:29,821  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:29,821  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:29,821  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:29,821  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:29,821  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:29,821  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:29,821  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:29,821  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:29,821  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:29,821  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:29,821  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:29,821  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:29,821  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:29,821  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:29,821  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+14:14:29,821  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:29,821  INFO SettingsFactory:266 - Query cache: disabled
+14:14:29,821  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:29,821  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:29,821  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:29,821  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:29,821  INFO SettingsFactory:314 - Statistics: disabled
+14:14:29,821  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:29,821  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:29,821  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:29,821  INFO SessionFactoryImpl:187 - building session factory
+14:14:29,836  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:29,836  INFO SessionFactoryImpl:805 - closing
+14:14:29,836  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:29,899  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:29,977 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+14:14:30,024  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:30,024  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:30,024  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:30,024  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:30,024  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:30,039  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:30,039  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:30,039  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:30,039  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:30,039  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:30,039  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:30,039  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+14:14:30,039  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:30,039  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****, autocommit=true, release_mode=auto}
+14:14:30,086  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:30,086  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:30,086  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:30,086  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+14:14:30,086  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:30,086  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:30,086  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:30,086  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:30,086  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:30,086  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:30,086  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:30,086  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:30,086  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:30,086  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:30,086  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:30,086  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:30,086  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:30,086  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:30,086  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:30,086  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:30,086  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+14:14:30,086  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:30,086  INFO SettingsFactory:266 - Query cache: disabled
+14:14:30,086  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:30,086  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:30,086  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:30,086  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:30,086  INFO SettingsFactory:314 - Statistics: disabled
+14:14:30,086  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:30,086  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:30,086  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:30,102  INFO SessionFactoryImpl:187 - building session factory
+14:14:30,102  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:30,118  INFO SessionFactoryImpl:805 - closing
+14:14:30,118  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:30,180  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:30,274  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:30,274  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:30,274  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:30,274  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:30,274  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:30,274  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:30,274  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:30,274  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:30,274  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:30,274  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:30,289  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:30,289  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+14:14:30,289  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:30,289  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****, autocommit=true, release_mode=auto}
+14:14:30,321  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:30,321  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:30,321  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:30,321  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+14:14:30,321  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:30,321  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:30,321  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:30,321  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:30,321  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:30,321  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:30,321  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:30,321  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:30,321  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:30,321  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:30,321  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:30,321  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:30,321  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:30,321  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:30,321  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:30,321  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:30,321  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+14:14:30,321  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:30,321  INFO SettingsFactory:266 - Query cache: disabled
+14:14:30,336  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:30,336  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:30,336  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:30,336  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:30,336  INFO SettingsFactory:314 - Statistics: disabled
+14:14:30,336  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:30,336  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:30,336  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:30,336  INFO SessionFactoryImpl:187 - building session factory
+14:14:30,336  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:30,352  INFO SessionFactoryImpl:805 - closing
+14:14:30,368  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:30,446  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:30,477  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:30,477  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:30,477  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:30,477  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:30,477  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:30,477  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:30,477  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:30,477  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:30,477  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:30,477  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:30,477  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:30,477  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+14:14:30,477  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:30,477  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+14:14:30,524  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:30,524  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:30,524  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:30,524  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+14:14:30,524  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:30,524  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:30,524  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:30,524  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:30,524  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:30,524  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:30,524  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:30,524  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:30,524  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:30,524  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:30,524  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:30,524  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:30,524  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:30,524  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:30,524  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:30,524  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:30,524  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+14:14:30,524  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:30,524  INFO SettingsFactory:266 - Query cache: disabled
+14:14:30,524  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:30,524  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:30,524  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:30,539  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:30,539  INFO SettingsFactory:314 - Statistics: disabled
+14:14:30,539  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:30,539  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:30,539  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:30,539  INFO SessionFactoryImpl:187 - building session factory
+14:14:30,539  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:30,571  INFO SessionFactoryImpl:805 - closing
+14:14:30,571  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:30,633  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:30,664  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:30,664  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:30,664  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:30,664  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:30,664  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:30,680  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:30,680  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:30,680  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:30,680  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:30,680  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:30,680  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:30,680  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+14:14:30,680  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:30,680  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+14:14:30,711  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:30,711  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:30,711  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:30,711  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+14:14:30,711  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:30,711  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:30,711  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:30,711  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:30,711  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:30,711  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:30,711  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:30,711  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:30,711  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:30,711  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:30,711  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:30,711  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:30,711  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:30,711  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:30,711  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:30,711  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:30,711  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+14:14:30,711  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:30,711  INFO SettingsFactory:266 - Query cache: disabled
+14:14:30,711  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:30,711  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:30,711  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:30,727  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:30,727  INFO SettingsFactory:314 - Statistics: disabled
+14:14:30,727  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:30,727  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:30,727  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:30,727  INFO SessionFactoryImpl:187 - building session factory
+14:14:30,727  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:30,743  INFO SessionFactoryImpl:805 - closing
+14:14:30,743  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:30,789  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:30,821  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:30,821  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:30,821  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:30,836  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:30,836  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:30,836  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:30,836  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:30,836  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:30,836  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:30,836  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:30,836  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:30,836  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+14:14:30,836  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:30,836  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+14:14:30,868  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:30,883  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:30,883  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:30,883  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+14:14:30,883  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:30,883  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:30,883  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:30,883  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:30,883  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:30,883  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:30,883  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:30,883  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:30,883  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:30,883  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:30,883  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:30,883  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:30,883  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:30,883  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:30,883  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:30,883  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:30,883  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+14:14:30,883  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:30,883  INFO SettingsFactory:266 - Query cache: disabled
+14:14:30,883  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:30,883  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:30,883  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:30,883  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:30,883  INFO SettingsFactory:314 - Statistics: disabled
+14:14:30,883  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:30,883  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:30,883  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:30,961  INFO SessionFactoryImpl:187 - building session factory
+14:14:30,961  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:30,977  INFO SessionFactoryImpl:805 - closing
+14:14:30,977  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:31,039  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:31,086  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:31,086  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:31,086  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:31,086  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:31,086  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:31,086  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:31,086  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:31,086  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:31,086  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:31,086  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:31,086  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:31,086  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+14:14:31,086  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:31,086  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+14:14:31,133  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:31,133  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:31,133  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:31,133  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+14:14:31,133  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:31,133  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:31,133  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:31,133  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:31,133  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:31,133  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:31,133  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:31,133  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:31,133  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:31,133  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:31,133  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:31,133  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:31,133  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:31,133  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:31,133  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:31,133  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:31,133  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+14:14:31,149  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:31,149  INFO SettingsFactory:266 - Query cache: disabled
+14:14:31,149  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:31,149  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:31,149  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:31,149  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:31,149  INFO SettingsFactory:314 - Statistics: disabled
+14:14:31,149  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:31,149  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:31,149  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:31,149  INFO SessionFactoryImpl:187 - building session factory
+14:14:31,149  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:31,164  INFO SessionFactoryImpl:805 - closing
+14:14:31,164  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:31,227  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:31,383  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:31,524  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:31,649  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:31,789  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:31,883 DEBUG SimpleDataSource:27 - Created connection 22816835.
+14:14:31,883 DEBUG Connection:27 - {conn-100093} Connection
+14:14:31,883 DEBUG Connection:27 - {conn-100093} Preparing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:31,883 DEBUG PreparedStatement:27 - {pstm-100094} Executing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:31,961 DEBUG PreparedStatement:27 - {pstm-100094} Parameters: []
+14:14:31,961 DEBUG PreparedStatement:27 - {pstm-100094} Types: []
+14:14:31,961 DEBUG ResultSet:27 - {rset-100095} ResultSet
+14:14:31,961 DEBUG ResultSet:27 - {rset-100095} Header: [ID]
+14:14:31,961 DEBUG ResultSet:27 - {rset-100095} Result: [1066]
+14:14:31,961 DEBUG Connection:27 - {conn-100093} Preparing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:31,961 DEBUG PreparedStatement:27 - {pstm-100096} Executing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:31,961 DEBUG PreparedStatement:27 - {pstm-100096} Parameters: [1066, Test, User, null]
+14:14:31,961 DEBUG PreparedStatement:27 - {pstm-100096} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+14:14:31,977 DEBUG SimpleDataSource:27 - Returned connection 22816835 to pool.
+14:14:31,977 DEBUG SimpleDataSource:27 - Checked out connection 22816835 from pool.
+14:14:31,977 DEBUG Connection:27 - {conn-100097} Connection
+14:14:31,977 DEBUG Connection:27 - {conn-100097} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:31,977 DEBUG PreparedStatement:27 - {pstm-100098} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:31,977 DEBUG PreparedStatement:27 - {pstm-100098} Parameters: [1066]
+14:14:31,977 DEBUG PreparedStatement:27 - {pstm-100098} Types: [java.lang.Long]
+14:14:31,977 DEBUG ResultSet:27 - {rset-100099} ResultSet
+14:14:31,977 DEBUG ResultSet:27 - {rset-100099} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:31,977 DEBUG ResultSet:27 - {rset-100099} Result: [1066, Test, User, null]
+14:14:31,977 DEBUG SimpleDataSource:27 - Returned connection 22816835 to pool.
+14:14:32,039  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:32,118 DEBUG SimpleDataSource:27 - Created connection 2823810.
+14:14:32,118 DEBUG Connection:27 - {conn-100100} Connection
+14:14:32,118 DEBUG Connection:27 - {conn-100100} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:32,118 DEBUG PreparedStatement:27 - {pstm-100101} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:32,118 DEBUG PreparedStatement:27 - {pstm-100101} Parameters: [1]
+14:14:32,133 DEBUG PreparedStatement:27 - {pstm-100101} Types: [java.lang.Long]
+14:14:32,133 DEBUG ResultSet:27 - {rset-100102} ResultSet
+14:14:32,133 DEBUG ResultSet:27 - {rset-100102} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:32,133 DEBUG ResultSet:27 - {rset-100102} Result: [1, Jason, Carey, A]
+14:14:32,133 DEBUG SimpleDataSource:27 - Returned connection 2823810 to pool.
+14:14:32,196  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:32,305 DEBUG SimpleDataSource:27 - Created connection 28611526.
+14:14:32,305 DEBUG Connection:27 - {conn-100103} Connection
+14:14:32,305 DEBUG Connection:27 - {conn-100103} Preparing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:32,305 DEBUG PreparedStatement:27 - {pstm-100104} Executing Statement:     select CONTACT_SEQ.NEXTVAL as id from dual        
+14:14:32,305 DEBUG PreparedStatement:27 - {pstm-100104} Parameters: []
+14:14:32,305 DEBUG PreparedStatement:27 - {pstm-100104} Types: []
+14:14:32,305 DEBUG ResultSet:27 - {rset-100105} ResultSet
+14:14:32,305 DEBUG ResultSet:27 - {rset-100105} Header: [ID]
+14:14:32,305 DEBUG ResultSet:27 - {rset-100105} Result: [1067]
+14:14:32,305 DEBUG Connection:27 - {conn-100103} Preparing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:32,305 DEBUG PreparedStatement:27 - {pstm-100106} Executing Statement:        INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+14:14:32,305 DEBUG PreparedStatement:27 - {pstm-100106} Parameters: [1067, Test, User, null]
+14:14:32,305 DEBUG PreparedStatement:27 - {pstm-100106} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+14:14:32,305 DEBUG SimpleDataSource:27 - Returned connection 28611526 to pool.
+14:14:32,305 DEBUG SimpleDataSource:27 - Checked out connection 28611526 from pool.
+14:14:32,321 DEBUG Connection:27 - {conn-100107} Connection
+14:14:32,321 DEBUG Connection:27 - {conn-100107} Preparing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+14:14:32,321 DEBUG PreparedStatement:27 - {pstm-100108} Executing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+14:14:32,321 DEBUG PreparedStatement:27 - {pstm-100108} Parameters: [New First Name, User, null, 1067]
+14:14:32,321 DEBUG PreparedStatement:27 - {pstm-100108} Types: [java.lang.String, java.lang.String, null, java.lang.Long]
+14:14:32,321 DEBUG SimpleDataSource:27 - Returned connection 28611526 to pool.
+14:14:32,321 DEBUG SimpleDataSource:27 - Checked out connection 28611526 from pool.
+14:14:32,321 DEBUG Connection:27 - {conn-100109} Connection
+14:14:32,321 DEBUG Connection:27 - {conn-100109} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:32,321 DEBUG PreparedStatement:27 - {pstm-100110} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:32,321 DEBUG PreparedStatement:27 - {pstm-100110} Parameters: [1067]
+14:14:32,321 DEBUG PreparedStatement:27 - {pstm-100110} Types: [java.lang.Long]
+14:14:32,321 DEBUG ResultSet:27 - {rset-100111} ResultSet
+14:14:32,321 DEBUG ResultSet:27 - {rset-100111} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:32,321 DEBUG ResultSet:27 - {rset-100111} Result: [1067, New First Name, User, null]
+14:14:32,321 DEBUG SimpleDataSource:27 - Returned connection 28611526 to pool.
+14:14:32,383  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:32,477 DEBUG SimpleDataSource:27 - Created connection 10311571.
+14:14:32,477 DEBUG Connection:27 - {conn-100112} Connection
+14:14:32,477 DEBUG Connection:27 - {conn-100112} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:32,477 DEBUG PreparedStatement:27 - {pstm-100113} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:32,477 DEBUG PreparedStatement:27 - {pstm-100113} Parameters: [1]
+14:14:32,477 DEBUG PreparedStatement:27 - {pstm-100113} Types: [java.lang.Long]
+14:14:32,477 DEBUG ResultSet:27 - {rset-100114} ResultSet
+14:14:32,477 DEBUG ResultSet:27 - {rset-100114} Header: [ID, FIRSTNAME, LASTNAME, MIDDLEINITIAL]
+14:14:32,477 DEBUG ResultSet:27 - {rset-100114} Result: [1, Jason, Carey, A]
+14:14:32,477 DEBUG SimpleDataSource:27 - Returned connection 10311571 to pool.
+14:14:32,477 DEBUG SimpleDataSource:27 - Checked out connection 10311571 from pool.
+14:14:32,477 DEBUG Connection:27 - {conn-100115} Connection
+14:14:32,477 DEBUG Connection:27 - {conn-100115} Preparing Statement:    DELETE CONTACT WHERE ID = ?     
+14:14:32,477 DEBUG PreparedStatement:27 - {pstm-100116} Executing Statement:    DELETE CONTACT WHERE ID = ?     
+14:14:32,477 DEBUG PreparedStatement:27 - {pstm-100116} Parameters: [1]
+14:14:32,477 DEBUG PreparedStatement:27 - {pstm-100116} Types: [java.lang.Long]
+14:14:32,477 DEBUG SimpleDataSource:27 - Returned connection 10311571 to pool.
+14:14:32,477 DEBUG SimpleDataSource:27 - Checked out connection 10311571 from pool.
+14:14:32,477 DEBUG Connection:27 - {conn-100117} Connection
+14:14:32,477 DEBUG Connection:27 - {conn-100117} Preparing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:32,493 DEBUG PreparedStatement:27 - {pstm-100118} Executing Statement:    SELECT     ID as id,     FIRST_NAME as firstName,     LAST_NAME as lastName,     MIDDLE_INITIAL as middleInitial   FROM CONTACT   WHERE ID = ?     
+14:14:32,493 DEBUG PreparedStatement:27 - {pstm-100118} Parameters: [1]
+14:14:32,493 DEBUG PreparedStatement:27 - {pstm-100118} Types: [java.lang.Long]
+14:14:32,493 DEBUG ResultSet:27 - {rset-100119} ResultSet
+14:14:32,493 DEBUG SimpleDataSource:27 - Returned connection 10311571 to pool.
+14:14:32,493 DEBUG SimpleDataSource:27 - Checked out connection 10311571 from pool.
+14:14:32,493 DEBUG Connection:27 - {conn-100120} Connection
+14:14:32,493 DEBUG Connection:27 - {conn-100120} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:32,493 DEBUG PreparedStatement:27 - {pstm-100121} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+14:14:32,493 DEBUG PreparedStatement:27 - {pstm-100121} Parameters: [1]
+14:14:32,493 DEBUG PreparedStatement:27 - {pstm-100121} Types: [java.lang.Long]
+14:14:32,493 DEBUG ResultSet:27 - {rset-100122} ResultSet
+14:14:32,493 DEBUG SimpleDataSource:27 - Returned connection 10311571 to pool.
+14:14:32,586  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:32,618  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:32,618  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:32,618  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:32,633  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:32,633  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:32,633  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:32,633  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:32,633  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:32,633  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:32,633  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:32,633  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:32,633  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+14:14:32,633  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:32,633  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+14:14:32,664  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:32,664  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:32,664  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:32,664  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+14:14:32,664  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:32,680  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:32,680  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:32,680  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:32,680  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:32,680  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:32,680  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:32,680  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:32,680  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:32,680  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:32,680  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:32,680  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:32,680  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:32,680  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:14:32,680  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:14:32,680  INFO SettingsFactory:252 - Query language substitutions: {}
+14:14:32,680  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+14:14:32,680  INFO SettingsFactory:262 - Second-level cache: enabled
+14:14:32,680  INFO SettingsFactory:266 - Query cache: disabled
+14:14:32,680  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:14:32,680  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:14:32,680  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:14:32,680  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:14:32,680  INFO SettingsFactory:314 - Statistics: disabled
+14:14:32,680  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:14:32,680  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:14:32,680  INFO SettingsFactory:337 - Named query checking : enabled
+14:14:32,680  INFO SessionFactoryImpl:187 - building session factory
+14:14:32,680  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:14:32,696  INFO SessionFactoryImpl:805 - closing
+14:14:32,696  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+14:14:32,758  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+14:14:32,789  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+14:14:32,789  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+14:14:32,805  INFO Configuration:1575 - Configured SessionFactory: null
+14:14:32,805  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:14:32,805  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+14:14:32,805  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+14:14:32,805  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+14:14:32,805  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+14:14:32,805  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:14:32,805  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:14:32,805  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:14:32,805  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+14:14:32,805  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+14:14:32,805  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+14:14:32,852  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+14:14:32,852  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+14:14:32,852  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+14:14:32,852  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+14:14:32,852  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:14:32,852  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:14:32,852  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:14:32,852  INFO SettingsFactory:181 - JDBC batch size: 15
+14:14:32,852  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:14:32,852  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:14:32,852  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+14:14:32,852  INFO SettingsFactory:205 - Connection release mode: auto
+14:14:32,852  INFO SettingsFactory:223 - Default schema: SCHOOL
+14:14:32,852  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:14:32,852  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+14:14:32,852  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:14:32,852  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:14:32,852  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory

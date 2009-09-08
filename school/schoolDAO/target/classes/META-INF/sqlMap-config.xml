@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig PUBLIC 
+    "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+	
+<sqlMapConfig>
+	
+	<!--
+		The properties (name=value) in the file specified here can be used
+		placeholders in this config file (e.g. “${driver}”. The file is
+		usually relative to the classpath and is optional.
+	<properties resource="examples/sqlmap/maps/SqlMapConfigExample.properties" />
+	-->
+	
+	<!--
+		These settings control SqlMap configuration details, primarily to do
+		with transaction management. They are all optional (see the Developer
+		Guide for more).
+	-->
+	<settings 
+	   cacheModelsEnabled="true" 
+	   enhancementEnabled="true"
+	   lazyLoadingEnabled="true" 
+	   maxRequests="32" 
+	   maxSessions="10"
+	   maxTransactions="5" 
+	   useStatementNamespaces="false" />
+	   
+	<!--
+		Type aliases allow you to use a shorter name for long fully qualified
+		class names.
+	<typeAlias alias="order" type="testdomain.Order" />
+	-->
+	
+	<!--
+		Configure a datasource to use with this SQL Map using
+		SimpleDataSource. Notice the use of the properties from the above
+		resource
+	-->
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="oracle.jdbc.OracleDriver" />
+			<property name="JDBC.ConnectionURL" value="jdbc:oracle:thin:@///XE" />
+			<property name="JDBC.Username" value="school" />
+			<property name="JDBC.Password" value="school" />
+		</dataSource>
+	</transactionManager>
+	
+	<!--
+		Identify all SQL Map XML files to be loaded by this SQL map. Notice
+		the paths are relative to the classpath. For now, we only have one…
+	-->
+	<sqlMap resource="META-INF/Contact.xml" />
+	<sqlMap resource="META-INF/Student.xml" />
+</sqlMapConfig>
