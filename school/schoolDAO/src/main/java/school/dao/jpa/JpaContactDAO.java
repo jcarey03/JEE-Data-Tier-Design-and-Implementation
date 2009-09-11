@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import school.bo.Contact;
 import school.dao.ContactDAO;
+import school.dao.DataAccessException;
 
 public class JpaContactDAO implements ContactDAO {
 
@@ -28,10 +29,12 @@ public class JpaContactDAO implements ContactDAO {
 		getEntityManager().persist(contact);
 	}
 
-	public void deleteContact(Long id) {
+	public void deleteContact(Long id) throws DataAccessException {
+		
+		// need to get contact into persistence context
 		Contact contact = readContact(id);
 		if(contact == null) {
-			throw new RuntimeException("Invalid id: " + id);
+			throw new DataAccessException("Invalid id: " + id);
 		}
 		getEntityManager().remove(contact);
 	}

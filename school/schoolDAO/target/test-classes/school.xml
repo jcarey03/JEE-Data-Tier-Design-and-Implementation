@@ -4,18 +4,18 @@
 
 <dataset>
   <CONTACT ID='1' 
-           FIRST_NAME='Jason'
-           MIDDLE_INITIAL='A'
-           LAST_NAME='Carey' />
+           FIRST_NAME='Bob'
+           MIDDLE_INITIAL='N'
+           LAST_NAME='Marley' />
   <CONTACT ID='2' 
-           FIRST_NAME='Jennifer'
+           FIRST_NAME='Brett'
            MIDDLE_INITIAL='[NULL]'
-           LAST_NAME='Carey' />
+           LAST_NAME='Michaels' />
   <CONTACT ID='3' 
-           FIRST_NAME='Jackie'
-           LAST_NAME='Carey' />
+           FIRST_NAME='Jim'
+           LAST_NAME='Morrison' />
   <STUDENT ID='1'
            MAJOR='[NULL]' />
   <STUDENT ID='2'
-           MAJOR='Math' />
+           MAJOR='Love' />
 </dataset>

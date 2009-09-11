@@ -12,10 +12,10 @@ import org.slf4j.LoggerFactory;
 
 import school.bo.Contact;
 import school.dao.ContactDAO;
+import school.dao.DataAccessException;
 
 public class JdbcContactDAO implements ContactDAO {
-	
-	@SuppressWarnings("unused")
+
 	private static final Logger logger = 
 		LoggerFactory.getLogger(JdbcContactDAO.class);
 	
@@ -25,7 +25,7 @@ public class JdbcContactDAO implements ContactDAO {
 		this.connection = connection;
 	}
 
-	public void createContact(Contact contact) {
+	public void createContact(Contact contact) throws DataAccessException {
 		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -42,6 +42,8 @@ public class JdbcContactDAO implements ContactDAO {
 			pstmt.setString(3, contact.getMiddleInitial());
 			
 			pstmt.executeUpdate();
+			
+			/* set the primary key value on the contact instance */
 			rs = pstmt.getGeneratedKeys();
 			if(rs != null && rs.next()) {
 
@@ -56,24 +58,28 @@ public class JdbcContactDAO implements ContactDAO {
 			}
 
 		} catch(SQLException sqle) {
-			throw new RuntimeException(sqle);
+			throw new DataAccessException(sqle);
 		} catch(NoSuchMethodException nsme) {
-			throw new RuntimeException(nsme);
+			throw new DataAccessException(nsme);
 		} catch(InvocationTargetException ite) {
-			throw new RuntimeException(ite);
+			throw new DataAccessException(ite);
 		} catch(IllegalAccessException iae) {
-			throw new RuntimeException(iae);
+			throw new DataAccessException(iae);
 		} finally {
 			
 			if(pstmt != null) {
-				try { pstmt.close(); } catch (SQLException sqle) { /* ignored */ }
+				try { 
+					pstmt.close(); 
+				} catch (SQLException sqle) {
+					logger.warn(sqle.toString());
+				}
 			}
 			
 		}
 		
 	}
 
-	public void deleteContact(Long id) {
+	public void deleteContact(Long id) throws DataAccessException {
 		
 		PreparedStatement pstmt = null;
 		try {
@@ -81,23 +87,28 @@ public class JdbcContactDAO implements ContactDAO {
 			pstmt = connection.prepareStatement(DELETE_SQL);
 			pstmt.setLong(1, id);
 			
+			// delete record and check that it was successful
 			int rowsUpdated = pstmt.executeUpdate();
 			if(rowsUpdated != 1) {
-				throw new RuntimeException("contact not deleted: " + id);
+				throw new DataAccessException("contact not deleted: " + id);
 			}
 			
 		} catch(SQLException sqle) {
-			throw new RuntimeException(sqle);
+			throw new DataAccessException(sqle);
 		} finally {
 			
 			if(pstmt != null) {
-				try { pstmt.close(); } catch (SQLException sqle) { /* ignored */ }
+				try { 
+					pstmt.close(); 
+				} catch (SQLException sqle) {
+					logger.warn(sqle.toString());
+				}
 			}
 			
 		}
 	}
 
-	public Contact readContact(Long id) {
+	public Contact readContact(Long id) throws DataAccessException {
 		
 		Contact contact = null;
 		PreparedStatement pstmt = null;
@@ -109,6 +120,7 @@ public class JdbcContactDAO implements ContactDAO {
 			
 			rs = pstmt.executeQuery();
 			
+			// go to the first record
 			if(rs.next()) {
 				
 				contact = new Contact(id);
@@ -121,18 +133,22 @@ public class JdbcContactDAO implements ContactDAO {
 			return contact;
 			
 		} catch(SQLException sqle) {
-			throw new RuntimeException(sqle);
+			throw new DataAccessException(sqle);
 		} finally {
 			
 			if(pstmt != null) {
-				try { pstmt.close(); } catch (SQLException sqle) { /* ignored */ }
+				try { 
+					pstmt.close(); 
+				} catch (SQLException sqle) {
+					logger.warn(sqle.toString());
+				}
 			}
 			
 		}
 		
 	}
 
-	public void updateContact(Contact contact) {
+	public void updateContact(Contact contact) throws DataAccessException {
 
 		PreparedStatement pstmt = null;
 		try {
@@ -143,17 +159,23 @@ public class JdbcContactDAO implements ContactDAO {
 			pstmt.setString(3, contact.getMiddleInitial());
 			pstmt.setLong(4, contact.getId());
 			
+			// update record and check that it was successful
 			int rowsUpdated = pstmt.executeUpdate();
 			if(rowsUpdated != 1) {
-				throw new RuntimeException("contact not updated: " + contact.getId());
+				throw new DataAccessException(
+					"contact not updated: " + contact.getId());
 			}
 			
 		} catch(SQLException sqle) {
-			throw new RuntimeException(sqle);
+			throw new DataAccessException(sqle);
 		} finally {
 			
 			if(pstmt != null) {
-				try { pstmt.close(); } catch (SQLException sqle) { /* ignored */ }
+				try { 
+					pstmt.close(); 
+				} catch (SQLException sqle) {
+					logger.warn(sqle.toString());
+				}
 			}
 			
 		}

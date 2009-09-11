@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 @Table(name="CONTACT")
 @Inheritance(strategy=InheritanceType.JOINED)
 @SuppressWarnings("serial")
-public class Contact implements Serializable {
+public class Contact implements Serializable {  
 
 	@SuppressWarnings("unused")
 	private static final Logger logger = LoggerFactory.getLogger(Contact.class);

@@ -16,30 +16,6 @@ public final class BoBeanEqualsFactory {
 			.append(c1.getLastName(), c2.getLastName())
 			.append(c2.getMiddleInitial(), c2.getMiddleInitial()).isEquals();
 		
-//		if(c1.getId() != c2.getId()) {
-//			return false;
-//		}
-//		
-//		if(c1.getFirstName() == null && c2.getFirstName() != null) {
-//			return false;
-//		} else if(!c1.getFirstName().equals(c2.getLastName())) {
-//			return false;
-//		}
-//		
-//		if(c1.getLastName() == null && c2.getLastName() != null) {
-//			return false;
-//		} else if(!c1.getLastName().equals(c2.getLastName())) {
-//			return false;
-//		}
-//		
-//		if(c1.getMiddleInitial() == null && c2.getMiddleInitial() != null) {
-//			return false;
-//		} else if(!c1.getMiddleInitial().equals(c2.getLastName())) {
-//			return false;
-//		}
-//		
-//		return true;
-		
 	}
 	
 }

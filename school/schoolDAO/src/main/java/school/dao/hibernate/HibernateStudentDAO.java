@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import school.bo.Student;
+import school.dao.DataAccessException;
 import school.dao.StudentDAO;
 
 public class HibernateStudentDAO implements StudentDAO {
@@ -28,9 +29,11 @@ public class HibernateStudentDAO implements StudentDAO {
 	}
 
 	public void deleteStudent(Long id) {
+		
+		// need to get student into the persistence context
 		Student student = readStudent(id);
 		if(student == null) {
-			throw new RuntimeException("Invalid id: " + id);
+			throw new DataAccessException("Invalid id: " + id);
 		}
 		getSession().delete(student);
 	}

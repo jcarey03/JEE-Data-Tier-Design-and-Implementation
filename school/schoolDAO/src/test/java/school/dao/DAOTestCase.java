@@ -13,13 +13,11 @@ import org.junit.Before;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import school.dao.hibernate.HibernateContactDAOTest;
-
 public abstract class DAOTestCase extends DBTestCase {
 
 	@SuppressWarnings("unused")
 	private static final Logger logger = 
-		LoggerFactory.getLogger(HibernateContactDAOTest.class);;
+		LoggerFactory.getLogger(DAOTestCase.class);
 	
 	@Before
 	public void setUp() throws Exception {
@@ -56,7 +54,8 @@ public abstract class DAOTestCase extends DBTestCase {
 	
 	@Override
     protected void setUpDatabaseConfig(DatabaseConfig config) {
-        config.setProperty(
+        
+		config.setProperty(
         	DatabaseConfig.PROPERTY_DATATYPE_FACTORY, 
         	new org.dbunit.ext.oracle.OracleDataTypeFactory()
         );
@@ -64,15 +63,18 @@ public abstract class DAOTestCase extends DBTestCase {
         	DatabaseConfig.FEATURE_SKIP_ORACLE_RECYCLEBIN_TABLES, 
             true
         );
+        
     }
 	
 	@Override
 	protected IDataSet getDataSet() throws Exception {
+		
 		ReplacementDataSet dataSet = new ReplacementDataSet(
 			new FlatXmlDataSet(
 				new FileInputStream(System.getProperty("data.file")))); 
 		dataSet.addReplacementObject("[NULL]", null);
 		return dataSet;
+		
     }
 	
 }

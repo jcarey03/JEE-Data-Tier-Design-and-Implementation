@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import school.bo.Contact;
 import school.dao.ContactDAO;
+import school.dao.DataAccessException;
 
 public class HibernateContactDAO implements ContactDAO {
 	
@@ -28,10 +29,13 @@ public class HibernateContactDAO implements ContactDAO {
 	}
 
 	public void deleteContact(Long id) {
+		
+		// need to get contact into the persistence context
 		Contact contact = readContact(id);
 		if(contact == null) {
-			throw new RuntimeException("Invalid id: " + id);
+			throw new DataAccessException("Invalid id: " + id);
 		}
+
 		getSession().delete(contact);
 	}
 
@@ -39,6 +43,10 @@ public class HibernateContactDAO implements ContactDAO {
 		return (Contact) getSession().get(Contact.class, id);
 	}
 
+	public Contact readContactByLoad(Long id) {
+		return (Contact) getSession().load(Contact.class, id);
+	}
+	
 	public void updateContact(Contact contact) {
 		getSession().update(contact);
 	}

@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import school.bo.Student;
+import school.dao.DataAccessException;
 import school.dao.StudentDAO;
 
 public class JpaStudentDAO implements StudentDAO {
@@ -28,10 +29,12 @@ public class JpaStudentDAO implements StudentDAO {
 		getEntityManager().persist(student);
 	}
 
-	public void deleteStudent(Long id) {
+	public void deleteStudent(Long id) throws DataAccessException {
+		
+		// need to get student into persistence context
 		Student student = readStudent(id);
 		if(student == null) {
-			throw new RuntimeException("Invalid id: " + id);
+			throw new DataAccessException("Invalid id: " + id);
 		}
 		getEntityManager().remove(student);
 	}

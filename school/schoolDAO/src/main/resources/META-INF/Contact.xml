@@ -31,6 +31,7 @@
 		Each of the parameters in the #hash# symbols is a JavaBeans property.
 	-->
 	<insert id="createContact" parameterClass="school.bo.Contact">
+		
 		<selectKey keyProperty="id" resultClass="long">
 			select CONTACT_SEQ.NEXTVAL as id from dual
        </selectKey>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.907" errors="0" skipped="0" tests="4" name="school.dao.ibatis.IbatisContactDAOTest">
+<testsuite failures="0" time="1.391" errors="0" skipped="0" tests="4" name="school.dao.ibatis.SpringIbatisStudentDAOTest">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc."/>
     <property name="env.SYSTEMROOT" value="C:\WINDOWS"/>
@@ -129,8 +129,8 @@
     <property name="env.SYBASE_JRE6" value="C:\sybase\Shared\JRE-6_0_6_32BIT"/>
     <property name="env.PROCESSOR_LEVEL" value="6"/>
   </properties>
-  <testcase time="0.156" classname="school.dao.ibatis.IbatisContactDAOTest" name="testCreateContact"/>
-  <testcase time="0.219" classname="school.dao.ibatis.IbatisContactDAOTest" name="testReadContact"/>
-  <testcase time="0.297" classname="school.dao.ibatis.IbatisContactDAOTest" name="testUpdateContact"/>
-  <testcase time="0.219" classname="school.dao.ibatis.IbatisContactDAOTest" name="testDeleteContact"/>
+  <testcase time="0.328" classname="school.dao.ibatis.SpringIbatisStudentDAOTest" name="testCreateStudent"/>
+  <testcase time="0.282" classname="school.dao.ibatis.SpringIbatisStudentDAOTest" name="testReadStudent"/>
+  <testcase time="0.406" classname="school.dao.ibatis.SpringIbatisStudentDAOTest" name="testUpdateStudent"/>
+  <testcase time="0.375" classname="school.dao.ibatis.SpringIbatisStudentDAOTest" name="testDeleteStudent"/>
 </testsuite>

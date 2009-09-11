@@ -1,4 +1,6 @@
 package school.dao.hibernate;
+import org.hibernate.Hibernate;
+import org.hibernate.ObjectNotFoundException;
 import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
@@ -13,10 +15,11 @@ import school.dao.ContactDAO;
 import school.dao.StudentDAO;
 
 public class HibernateContactDAOTest extends HibernateDAOTestCase {
-
-	@SuppressWarnings("unused")
+	
 	private static final Logger logger = 
 		LoggerFactory.getLogger(HibernateContactDAOTest.class);
+	
+	private static final Long INVALID_CONTACT_ID = 1000L;
 	
 	private Transaction tx;
 
@@ -118,22 +121,42 @@ public class HibernateContactDAOTest extends HibernateDAOTestCase {
 		
 		Contact deletedDbContact = contactDao.readContact(id);
 		
-//		/*
-//		 * Use below try-catch if using session.load()
-//		 */
-//		try {
-//			Hibernate.initialize(deletedDbContact);
-//		} catch(ObjectNotFoundException onfe) {
-//			logger.debug(onfe.toString());
-//			return;
-//		}
-//		fail("deletedDbContact not deleted");
-		
 		assertNull("deletedDbContact not null", deletedDbContact);
 		
 		// test for cascading delete
 		Student deletedDbStudent = studentDao.readStudent(id);
 		assertNull("dbStudent not deleted", deletedDbStudent);
+		
+	}
+	
+	@Test
+	public void testInvalidReadContact() throws Exception {
+		
+		Contact invalidDbContact = 
+			((HibernateContactDAO) contactDao).readContact(INVALID_CONTACT_ID);
+		
+		// should be null because session.get(...) returns null if not found
+		assertNull("invalidDbContact not null", invalidDbContact);
+		
+	}
+	
+	@Test
+	public void testInvalidReadContactByLoad() throws Exception {
+
+		Contact invalidDbContact = 
+			((HibernateContactDAO) contactDao).readContactByLoad(INVALID_CONTACT_ID);
+		
+		// should not be null because it is a proxy, but it will throw error
+		// when hydrated
+		assertNotNull("invalidDbContact is null", invalidDbContact);
+		
+		try {
+			Hibernate.initialize(invalidDbContact);
+		} catch(ObjectNotFoundException onfe) {
+			logger.debug(onfe.toString());
+			return;
+		}
+		fail("invalidDbContact exists");
 		
 	}
 	
