@@ -37,6 +37,9 @@ connections, so follow the below steps to change this:
 4.  Stop and start the Oracle instance for the changes to take effect
           Start Menu > Programs > Oracle Database 10g Express Edition > Start/Stop 
 
+FYI, the project is currently setup for a database user account with username = 'school' 
+and password = 'school'.  This will be more easily configurable in the near future.
+
 Lastly, you need to execute the 'school_schema.sql' SQL file to populate the
 database with the schema.
 
