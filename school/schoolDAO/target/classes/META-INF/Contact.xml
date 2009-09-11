@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC 
+    "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="CONTACT">
+
+     <resultMap id="ContactResultMap" class="school.bo.Contact" >  
+        <result column="ID" property="id" />  
+        <result column="FIRST_NAME" property="firstName" />  
+        <result column="LAST_NAME" property="lastName" />
+        <result column="MIDDLE_INITIAL" property="middleInitial" />  
+     </resultMap>
+
+	<!--
+		Use primitive wrapper type (e.g. Integer) as parameter and allow
+		results to be auto-mapped results to Contact object (JavaBean)
+		properties
+	-->
+	<select id="readContact" resultClass="school.bo.Contact">
+		SELECT
+		  ID as id,
+		  FIRST_NAME as firstName,
+		  LAST_NAME as lastName,
+		  MIDDLE_INITIAL as middleInitial
+		FROM CONTACT
+		WHERE ID = #value#
+    </select>
+
+	<!--
+		Use Contact object (JavaBean) properties as parameters for insert.
+		Each of the parameters in the #hash# symbols is a JavaBeans property.
+	-->
+	<insert id="createContact" parameterClass="school.bo.Contact">
+		
+		<selectKey keyProperty="id" resultClass="long">
+			select CONTACT_SEQ.NEXTVAL as id from dual
+       </selectKey>
+
+		INSERT INTO CONTACT (
+		  ID,
+		  FIRST_NAME,
+		  LAST_NAME,
+		  MIDDLE_INITIAL
+	    ) VALUES (
+		  #id#,
+		  #firstName#,
+		  #lastName#,
+		  #middleInitial#
+		)
+	</insert>
+
+	<!--
+		Use Contact object (JavaBean) properties as parameters for update.
+		Each of the parameters in the #hash# symbols is a JavaBeans property.
+	-->
+	<update id="updateContact" parameterClass="school.bo.Contact">
+		UPDATE CONTACT SET
+		  FIRST_NAME = #firstName#,
+		  LAST_NAME = #lastName#,
+		  MIDDLE_INITIAL = #middleInitial#
+		WHERE ID = #id#
+    </update>
+
+	<!--
+		Use Contact object (JavaBean) “id” properties as parameters for
+		delete. Each of the parameters in the #hash# symbols is a JavaBeans
+		property.
+	-->
+	<delete id="deleteContact" parameterClass="java.lang.Long">
+		DELETE CONTACT WHERE ID = #id#
+    </delete>
+
+</sqlMap>

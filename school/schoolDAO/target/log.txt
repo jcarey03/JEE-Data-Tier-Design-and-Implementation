@@ -1,0 +1,657 @@
+21:59:13,105 DEBUG ResultSet:27 - {rset-100137} ResultSet
+21:59:13,105 DEBUG ResultSet:27 - {rset-100137} Header: [ID]
+21:59:13,105 DEBUG ResultSet:27 - {rset-100137} Result: [1146]
+21:59:13,105 DEBUG Connection:27 - {conn-100135} Preparing Statement:           INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+21:59:13,105 DEBUG PreparedStatement:27 - {pstm-100138} Executing Statement:           INSERT INTO CONTACT (     ID,     FIRST_NAME,     LAST_NAME,     MIDDLE_INITIAL      ) VALUES (     ?,     ?,     ?,     ?   )  
+21:59:13,105 DEBUG PreparedStatement:27 - {pstm-100138} Parameters: [1146, Test, User, null]
+21:59:13,105 DEBUG PreparedStatement:27 - {pstm-100138} Types: [java.lang.Long, java.lang.String, java.lang.String, null]
+21:59:13,120 DEBUG Connection:27 - {conn-100139} Connection
+21:59:13,120 DEBUG Connection:27 - {conn-100139} Preparing Statement:    INSERT INTO STUDENT (     ID,     MAJOR      ) VALUES (     ?,     ?   )  
+21:59:13,167 DEBUG PreparedStatement:27 - {pstm-100140} Executing Statement:    INSERT INTO STUDENT (     ID,     MAJOR      ) VALUES (     ?,     ?   )  
+21:59:13,167 DEBUG PreparedStatement:27 - {pstm-100140} Parameters: [1146, Cool Major]
+21:59:13,167 DEBUG PreparedStatement:27 - {pstm-100140} Types: [java.lang.Long, java.lang.String]
+21:59:13,167 DEBUG Connection:27 - {conn-100141} Connection
+21:59:13,167 DEBUG Connection:27 - {conn-100141} Preparing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+21:59:13,214 DEBUG PreparedStatement:27 - {pstm-100142} Executing Statement:    UPDATE CONTACT SET     FIRST_NAME = ?,     LAST_NAME = ?,     MIDDLE_INITIAL = ?   WHERE ID = ?     
+21:59:13,214 DEBUG PreparedStatement:27 - {pstm-100142} Parameters: [New First Name, User, null, 1146]
+21:59:13,214 DEBUG PreparedStatement:27 - {pstm-100142} Types: [java.lang.String, java.lang.String, null, java.lang.Long]
+21:59:13,214 DEBUG Connection:27 - {conn-100143} Connection
+21:59:13,214 DEBUG Connection:27 - {conn-100143} Preparing Statement:    UPDATE STUDENT SET     MAJOR = ?   WHERE ID = ?     
+21:59:13,261 DEBUG PreparedStatement:27 - {pstm-100144} Executing Statement:    UPDATE STUDENT SET     MAJOR = ?   WHERE ID = ?     
+21:59:13,261 DEBUG PreparedStatement:27 - {pstm-100144} Parameters: [Really Cool Major, 1146]
+21:59:13,261 DEBUG PreparedStatement:27 - {pstm-100144} Types: [java.lang.String, java.lang.Long]
+21:59:13,261 DEBUG Connection:27 - {conn-100145} Connection
+21:59:13,261 DEBUG Connection:27 - {conn-100145} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+21:59:13,308 DEBUG PreparedStatement:27 - {pstm-100146} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+21:59:13,308 DEBUG PreparedStatement:27 - {pstm-100146} Parameters: [1146]
+21:59:13,308 DEBUG PreparedStatement:27 - {pstm-100146} Types: [java.lang.Long]
+21:59:13,308 DEBUG ResultSet:27 - {rset-100147} ResultSet
+21:59:13,308 DEBUG ResultSet:27 - {rset-100147} Header: [ID, FIRST_NAME, LAST_NAME, MIDDLE_INITIAL, ID, MAJOR]
+21:59:13,308 DEBUG ResultSet:27 - {rset-100147} Result: [1146, New First Name, User, null, 1146, Really Cool Major]
+21:59:13,386  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:13,480 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+21:59:13,480 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+21:59:13,511  INFO ClassPathXmlApplicationContext:411 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e2c9bf: display name [org.springframework.context.support.ClassPathXmlApplicationContext@1e2c9bf]; startup date [Thu Sep 10 21:59:13 EDT 2009]; root of context hierarchy
+21:59:13,511  INFO XmlBeanDefinitionReader:323 - Loading XML bean definitions from class path resource [META-INF/appctx-datatier.xml]
+21:59:13,527  INFO ClassPathXmlApplicationContext:426 - Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@1e2c9bf]: org.springframework.beans.factory.support.DefaultListableBeanFactory@17d2f0e
+21:59:13,527  INFO DefaultListableBeanFactory:414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17d2f0e: defining beans [dataSource,sqlMapClient,sqlMapClientTemplate,contactDaoWithTemplate,studentDaoWithTemplate]; root of factory hierarchy
+21:59:13,527  INFO DriverManagerDataSource:155 - Loaded JDBC driver: oracle.jdbc.OracleDriver
+21:59:13,542 DEBUG Connection:27 - {conn-100148} Connection
+21:59:13,542 DEBUG Connection:27 - {conn-100148} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+21:59:13,574 DEBUG PreparedStatement:27 - {pstm-100149} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+21:59:13,589 DEBUG PreparedStatement:27 - {pstm-100149} Parameters: [1]
+21:59:13,589 DEBUG PreparedStatement:27 - {pstm-100149} Types: [java.lang.Long]
+21:59:13,589 DEBUG ResultSet:27 - {rset-100150} ResultSet
+21:59:13,589 DEBUG ResultSet:27 - {rset-100150} Header: [ID, FIRST_NAME, LAST_NAME, MIDDLE_INITIAL, ID, MAJOR]
+21:59:13,589 DEBUG ResultSet:27 - {rset-100150} Result: [1, Bob, Marley, N, 1, null]
+21:59:13,589 DEBUG Connection:27 - {conn-100151} Connection
+21:59:13,589 DEBUG Connection:27 - {conn-100151} Preparing Statement:    DELETE STUDENT WHERE ID = ?     
+21:59:13,636 DEBUG PreparedStatement:27 - {pstm-100152} Executing Statement:    DELETE STUDENT WHERE ID = ?     
+21:59:13,636 DEBUG PreparedStatement:27 - {pstm-100152} Parameters: [1]
+21:59:13,636 DEBUG PreparedStatement:27 - {pstm-100152} Types: [java.lang.Long]
+21:59:13,636 DEBUG Connection:27 - {conn-100153} Connection
+21:59:13,636 DEBUG Connection:27 - {conn-100153} Preparing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+21:59:13,683 DEBUG PreparedStatement:27 - {pstm-100154} Executing Statement:    SELECT     *   FROM CONTACT c, STUDENT s   WHERE c.ID = s.ID AND c.ID = ?     
+21:59:13,683 DEBUG PreparedStatement:27 - {pstm-100154} Parameters: [1]
+21:59:13,683 DEBUG PreparedStatement:27 - {pstm-100154} Types: [java.lang.Long]
+21:59:13,683 DEBUG ResultSet:27 - {rset-100155} ResultSet
+21:59:13,777  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:13,808  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:13,808  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:13,808  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:13,808  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:13,808  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:13,808  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:13,808  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:13,808  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:13,808  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:13,808  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:13,808  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:13,808  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+21:59:13,808  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:13,808  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+21:59:13,855  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:13,855  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:13,855  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:13,855  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+21:59:13,855  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:13,855  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:13,855  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:13,855  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:13,855  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:13,855  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:13,855  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:13,855  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:13,855  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:13,855  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:13,855  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:13,855  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:13,855  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:13,855  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:13,855  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:13,855  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:13,855  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+21:59:13,855  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:13,855  INFO SettingsFactory:266 - Query cache: disabled
+21:59:13,855  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:13,855  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:13,855  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:13,855  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:13,855  INFO SettingsFactory:314 - Statistics: disabled
+21:59:13,855  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:13,855  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:13,855  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:13,855  INFO SessionFactoryImpl:187 - building session factory
+21:59:13,870  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:13,886  INFO SessionFactoryImpl:805 - closing
+21:59:13,886  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:13,949  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:13,980  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:13,980  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:13,980  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:13,980  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:13,980  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:13,980  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:13,980  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:13,980  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:13,980  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:13,995  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:13,995  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:13,995  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+21:59:13,995  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:13,995  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+21:59:14,027  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:14,027  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:14,027  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:14,027  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+21:59:14,027  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:14,027  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:14,027  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:14,027  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:14,027  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:14,027  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:14,027  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:14,027  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:14,027  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:14,027  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:14,027  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:14,027  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:14,027  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:14,027  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:14,027  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:14,027  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:14,027  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+21:59:14,027  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:14,027  INFO SettingsFactory:266 - Query cache: disabled
+21:59:14,027  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:14,027  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:14,027  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:14,027  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:14,027  INFO SettingsFactory:314 - Statistics: disabled
+21:59:14,027  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:14,027  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:14,027  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:14,042  INFO SessionFactoryImpl:187 - building session factory
+21:59:14,042  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:14,042  INFO SessionFactoryImpl:805 - closing
+21:59:14,042  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:14,120  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:14,183  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:14,183  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:14,199  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:14,199  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:14,199  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:14,199  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:14,199  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:14,199  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:14,199  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:14,199  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:14,199  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:14,199  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+21:59:14,199  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:14,199  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+21:59:14,245  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:14,245  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:14,245  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:14,245  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+21:59:14,245  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:14,245  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:14,245  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:14,245  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:14,245  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:14,245  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:14,245  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:14,245  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:14,245  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:14,245  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:14,245  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:14,245  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:14,245  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:14,245  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:14,245  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:14,245  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:14,245  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+21:59:14,245  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:14,245  INFO SettingsFactory:266 - Query cache: disabled
+21:59:14,245  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:14,245  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:14,245  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:14,245  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:14,245  INFO SettingsFactory:314 - Statistics: disabled
+21:59:14,245  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:14,245  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:14,245  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:14,245  INFO SessionFactoryImpl:187 - building session factory
+21:59:14,245  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:14,261  INFO SessionFactoryImpl:805 - closing
+21:59:14,261  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:14,324  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:14,355  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:14,355  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:14,355  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:14,370  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:14,370  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:14,370  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:14,370  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:14,370  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:14,370  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:14,370  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:14,370  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:14,370  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+21:59:14,370  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:14,370  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+21:59:14,402  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:14,402  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:14,402  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:14,402  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+21:59:14,417  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:14,417  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:14,417  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:14,417  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:14,417  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:14,417  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:14,417  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:14,417  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:14,417  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:14,417  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:14,417  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:14,417  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:14,417  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:14,417  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:14,417  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:14,417  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:14,417  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+21:59:14,417  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:14,417  INFO SettingsFactory:266 - Query cache: disabled
+21:59:14,417  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:14,417  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:14,417  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:14,417  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:14,417  INFO SettingsFactory:314 - Statistics: disabled
+21:59:14,417  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:14,417  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:14,417  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:14,417  INFO SessionFactoryImpl:187 - building session factory
+21:59:14,417  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:14,449  INFO SessionFactoryImpl:805 - closing
+21:59:14,449  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:14,542 DEBUG SimpleDataSource:27 - SimpleDataSource forcefully closed/removed all connections.
+21:59:14,605  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:14,636  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:14,636  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:14,636  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:14,636  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:14,636  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:14,636  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:14,636  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:14,636  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:14,636  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:14,636  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:14,636  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:14,636  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+21:59:14,636  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:14,636  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+21:59:14,683  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:14,683  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:14,683  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:14,683  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+21:59:14,683  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:14,683  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:14,683  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:14,683  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:14,683  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:14,683  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:14,683  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:14,683  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:14,683  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:14,683  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:14,683  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:14,683  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:14,683  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:14,683  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:14,683  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:14,683  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:14,683  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+21:59:14,683  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:14,683  INFO SettingsFactory:266 - Query cache: disabled
+21:59:14,683  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:14,683  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:14,683  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:14,683  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:14,683  INFO SettingsFactory:314 - Statistics: disabled
+21:59:14,683  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:14,683  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:14,683  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:14,683  INFO SessionFactoryImpl:187 - building session factory
+21:59:14,699  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:14,699  INFO SessionFactoryImpl:805 - closing
+21:59:14,699  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:14,761  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:14,824  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:14,824  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:14,824  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:14,824  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:14,824  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:14,824  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:14,824  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:14,824  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:14,824  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:14,824  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:14,824  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:14,824  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+21:59:14,824  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:14,824  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****}
+21:59:14,870  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:14,870  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:14,870  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:14,870  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+21:59:14,870  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:14,870  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:14,870  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:14,870  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:14,870  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:14,870  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:14,870  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:14,870  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:14,870  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:14,870  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:14,870  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:14,870  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:14,870  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:14,870  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:14,870  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:14,870  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:14,870  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+21:59:14,870  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:14,870  INFO SettingsFactory:266 - Query cache: disabled
+21:59:14,870  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:14,886  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:14,886  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:14,886  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:14,886  INFO SettingsFactory:314 - Statistics: disabled
+21:59:14,886  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:14,886  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:14,886  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:14,886  INFO SessionFactoryImpl:187 - building session factory
+21:59:14,886  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:14,902  INFO SessionFactoryImpl:805 - closing
+21:59:14,902  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:14,980  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:15,027  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:15,027  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:15,027  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:15,027  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:15,027  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:15,027  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:15,027  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:15,027  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:15,027  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:15,042  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:15,042  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:15,042  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+21:59:15,042  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:15,042  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****, autocommit=true, release_mode=auto}
+21:59:15,074  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:15,074  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:15,074  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:15,074  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+21:59:15,074  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:15,074  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:15,074  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:15,074  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:15,074  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:15,074  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:15,074  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:15,074  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:15,074  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:15,074  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:15,074  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:15,074  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:15,074  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:15,074  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:15,074  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:15,074  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:15,074  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+21:59:15,074  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:15,074  INFO SettingsFactory:266 - Query cache: disabled
+21:59:15,074  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:15,074  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:15,074  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:15,074  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:15,074  INFO SettingsFactory:314 - Statistics: disabled
+21:59:15,074  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:15,074  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:15,074  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:15,074  INFO SessionFactoryImpl:187 - building session factory
+21:59:15,089  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:15,105  INFO SessionFactoryImpl:805 - closing
+21:59:15,105  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:15,167  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:15,245  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:15,245  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:15,245  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:15,245  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:15,245  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:15,245  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:15,245  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:15,245  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:15,261  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:15,261  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:15,261  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:15,261  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+21:59:15,261  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:15,261  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****, autocommit=true, release_mode=auto}
+21:59:15,292  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:15,292  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:15,292  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:15,292  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+21:59:15,292  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:15,292  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:15,292  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:15,292  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:15,292  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:15,292  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:15,292  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:15,292  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:15,292  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:15,292  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:15,308  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:15,308  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:15,308  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:15,308  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:15,308  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:15,308  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:15,308  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+21:59:15,308  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:15,308  INFO SettingsFactory:266 - Query cache: disabled
+21:59:15,308  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:15,308  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:15,308  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:15,308  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:15,308  INFO SettingsFactory:314 - Statistics: disabled
+21:59:15,308  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:15,308  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:15,308  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:15,308  INFO SessionFactoryImpl:187 - building session factory
+21:59:15,308  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:15,324  INFO SessionFactoryImpl:805 - closing
+21:59:15,324  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:15,370  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:15,433  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:15,433  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:15,433  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:15,433  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:15,433  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:15,449  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:15,449  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:15,449  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:15,449  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:15,449  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:15,449  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:15,449  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+21:59:15,449  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:15,449  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****, autocommit=true, release_mode=auto}
+21:59:15,495  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:15,495  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:15,495  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:15,495  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+21:59:15,495  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:15,495  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:15,495  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:15,495  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:15,495  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:15,495  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:15,495  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:15,495  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:15,495  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:15,495  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:15,495  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:15,495  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:15,495  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:15,495  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:15,495  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:15,495  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:15,495  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+21:59:15,495  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:15,495  INFO SettingsFactory:266 - Query cache: disabled
+21:59:15,495  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:15,495  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:15,495  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:15,495  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:15,495  INFO SettingsFactory:314 - Statistics: disabled
+21:59:15,574  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:15,574  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:15,574  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:15,574  INFO SessionFactoryImpl:187 - building session factory
+21:59:15,574  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:15,605  INFO SessionFactoryImpl:805 - closing
+21:59:15,605  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE
+21:59:15,699  INFO DatabaseDataSet:201 - 
+	database name=Oracle
+	database version=Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+	database major version=10
+	database minor version=2
+	jdbc driver name=Oracle JDBC driver
+	jdbc driver version=10.2.0.4.0
+	jdbc driver major version=10
+	jdbc driver minor version=2
+
+21:59:15,745  INFO Configuration:1460 - configuring from resource: /META-INF/hibernate.cfg.xml
+21:59:15,745  INFO Configuration:1437 - Configuration resource: /META-INF/hibernate.cfg.xml
+21:59:15,745  INFO Configuration:1575 - Configured SessionFactory: null
+21:59:15,745  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Contact
+21:59:15,745  INFO EntityBinder:422 - Bind entity school.bo.Contact on table CONTACT
+21:59:15,745  INFO AnnotationBinder:419 - Binding entity from annotated class: school.bo.Student
+21:59:15,745  INFO EntityBinder:422 - Bind entity school.bo.Student on table STUDENT
+21:59:15,745  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+21:59:15,761  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+21:59:15,761  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+21:59:15,761  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+21:59:15,761  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+21:59:15,761  INFO DriverManagerConnectionProvider:103 - using driver: oracle.jdbc.OracleDriver at URL: jdbc:oracle:thin:@///XE
+21:59:15,761  INFO DriverManagerConnectionProvider:109 - connection properties: {user=school, password=****, autocommit=true, release_mode=auto}
+21:59:15,792  INFO SettingsFactory:116 - RDBMS: Oracle, version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+21:59:15,792  INFO SettingsFactory:117 - JDBC driver: Oracle JDBC driver, version: 10.2.0.4.0
+21:59:15,792  INFO Dialect:175 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+21:59:15,792  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+21:59:15,792  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+21:59:15,792  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+21:59:15,792  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+21:59:15,792  INFO SettingsFactory:181 - JDBC batch size: 15
+21:59:15,808  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+21:59:15,808  INFO SettingsFactory:189 - Scrollable result sets: enabled
+21:59:15,808  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): disabled
+21:59:15,808  INFO SettingsFactory:205 - Connection release mode: auto
+21:59:15,808  INFO SettingsFactory:223 - Default schema: SCHOOL
+21:59:15,808  INFO SettingsFactory:232 - Default batch fetch size: 1
+21:59:15,808  INFO SettingsFactory:236 - Generate SQL with comments: enabled
+21:59:15,808  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+21:59:15,808  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+21:59:15,808  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+21:59:15,808  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+21:59:15,808  INFO SettingsFactory:252 - Query language substitutions: {}
+21:59:15,808  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+21:59:15,808  INFO SettingsFactory:262 - Second-level cache: enabled
+21:59:15,808  INFO SettingsFactory:266 - Query cache: disabled
+21:59:15,808  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+21:59:15,808  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+21:59:15,808  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+21:59:15,808  INFO SettingsFactory:305 - Echoing all SQL to stdout
+21:59:15,808  INFO SettingsFactory:314 - Statistics: disabled
+21:59:15,808  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+21:59:15,808  INFO SettingsFactory:333 - Default entity-mode: pojo
+21:59:15,808  INFO SettingsFactory:337 - Named query checking : enabled
+21:59:15,808  INFO SessionFactoryImpl:187 - building session factory
+21:59:15,808  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+21:59:15,839  INFO SessionFactoryImpl:805 - closing
+21:59:15,839  INFO DriverManagerConnectionProvider:170 - cleaning up connection pool: jdbc:oracle:thin:@///XE

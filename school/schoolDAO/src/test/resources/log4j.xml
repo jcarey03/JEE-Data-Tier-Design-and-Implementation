@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="R" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="target/log.txt" />
+		<param name="MaxFileSize" value="100KB" />
+		<!-- Keep one backup file -->
+		<param name="MaxBackupIndex" value="1" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	<logger name="school">
+        <level value="info" />
+        <appender-ref ref="stdout" />
+    </logger>
+    <logger name="com.ibatis">
+        <level value="debug" />
+        <appender-ref ref="stdout" />
+    </logger>
+    <logger name="java.sql">
+        <level value="debug" />
+        <appender-ref ref="stdout" />
+    </logger>
+	<root>
+		<priority value="info" />
+		<appender-ref ref="R" />
+	</root>
+</log4j:configuration>

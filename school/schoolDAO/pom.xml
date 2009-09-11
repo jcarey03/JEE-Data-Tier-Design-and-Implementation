@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>jmcarey</groupId>
+		<artifactId>school</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>jmcarey</groupId>
+	<artifactId>schoolDAO</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>jmcarey</groupId>
+			<artifactId>schoolBO</artifactId>
+			<version>${pom.version}</version>
+		</dependency>
+
+		<!-- hibernate dependencies -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.3.1.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager
+			</artifactId>
+			<version>3.4.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.4.0.GA</version>
+		</dependency>
+
+		<!-- ibatis dependencies -->
+		<dependency>
+			<groupId>org.apache.ibatis</groupId>
+			<artifactId>ibatis-sqlmap</artifactId>
+			<version>2.3.4.726</version>
+		</dependency>
+
+		<!-- oracle jdbc driver -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.4.0</version>
+		</dependency>
+
+        <!-- spring dependencies -->
+        <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring</artifactId>
+		    <version>2.5.6.SEC01</version>
+		</dependency> 
+
+		<!-- logging dependencies -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+
+		<!-- test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<version>2.4.5</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>${pom.groupId}</groupId>
+			<artifactId>schoolBO</artifactId>
+			<version>${pom.version}</version>
+			<!--
+				do not use <classifier> tag because the test jar will not be
+				available for use downstream (e.g., to be used by this module)
+			-->
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.4.2</version>
+				<configuration>
+					<systemProperties>
+						<property>
+							<name>jdbc.driver</name>
+							<value>oracle.jdbc.OracleDriver</value>
+						</property>
+						<property>
+							<name>jdbc.url</name>
+							<value>jdbc:oracle:thin:@///XE</value>
+						</property>
+						<property>
+							<name>jdbc.username</name>
+							<value>school</value>
+						</property>
+						<property>
+							<name>jdbc.password</name>
+							<value>school</value>
+						</property>
+						<property>
+							<name>jdbc.schema</name>
+							<value>SCHOOL</value>
+						</property>
+						<property>
+						    <name>data.file</name>
+						    <value>target/test-classes/school.xml</value>
+						</property>
+					</systemProperties>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

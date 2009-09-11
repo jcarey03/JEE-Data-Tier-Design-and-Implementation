@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="1.203" errors="0" skipped="0" tests="6" name="school.dao.hibernate.HibernateContactDAOTest">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="env.SYSTEMROOT" value="C:\WINDOWS"/>
+    <property name="localRepository" value="C:\Documents and Settings\Administrator\.m2\repository"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="env.PROMPT" value="$P$G"/>
+    <property name="os.name" value="Windows XP"/>
+    <property name="env.FP_NO_HOST_CHECK" value="NO"/>
+    <property name="sun.boot.class.path" value="c:\development\jdk1.6.0_11\jre\lib\resources.jar;c:\development\jdk1.6.0_11\jre\lib\rt.jar;c:\development\jdk1.6.0_11\jre\lib\sunrsasign.jar;c:\development\jdk1.6.0_11\jre\lib\jsse.jar;c:\development\jdk1.6.0_11\jre\lib\jce.jar;c:\development\jdk1.6.0_11\jre\lib\charsets.jar;c:\development\jdk1.6.0_11\jre\classes"/>
+    <property name="env.COMPUTERNAME" value="CORONA-WIN"/>
+    <property name="env.PWD" value="/cygdrive/c/development/workspace/school"/>
+    <property name="env.MAKE_MODE" value="unix"/>
+    <property name="env.ALLUSERSPROFILE" value="C:\Documents and Settings\All Users"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.runtime.version" value="1.6.0_11-b03"/>
+    <property name="env.HOMEPATH" value="\Documents and Settings\Administrator"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="jdbc.password" value="school"/>
+    <property name="env.USER" value="Administrator"/>
+    <property name="env.PATH" value="c:\development\apache-maven-2.1.0\bin;c:\development\jdk1.6.0_11\bin;C:\cygwin\usr\local\bin;C:\cygwin\bin;C:\cygwin\bin;C:\cygwin\usr\X11R6\bin;c:\sybase\DataAccess\ADONET\dll;c:\sybase\DataAccess\OLEDB\dll;c:\sybase\DataAccess\ODBC\dll;c:\sybase\ASE-15_0\jobscheduler\bin;c:\sybase\RPL-15_0\bin;c:\sybase\UAF-2_0\bin;c:\sybase\OCS-15_0\lib3p;c:\sybase\OCS-15_0\dll;c:\sybase\OCS-15_0\bin;c:\sybase\ASE-15_0\dll;c:\sybase\ASE-15_0\bin;c:\development\jdk1.6.0_11\bin;c:\development\apache-maven-2.1.0\bin;c:\oraclexe\app\oracle\product\10.2.0\server\bin;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\sybase\DBISQL\bin"/>
+    <property name="user.language" value="en"/>
+    <property name="env.WINDIR" value="C:\WINDOWS"/>
+    <property name="sun.boot.library.path" value="c:\development\jdk1.6.0_11\jre\bin"/>
+    <property name="classworlds.conf" value="c:\development\apache-maven-2.1.0/bin/m2.conf"/>
+    <property name="data.file" value="target/test-classes/school.xml"/>
+    <property name="java.version" value="1.6.0_11"/>
+    <property name="env.PROCESSOR_IDENTIFIER" value="x86 Family 6 Model 15 Stepping 6, GenuineIntel"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="env.INCLUDE" value="C:\sybase\OCS-15_0\include"/>
+    <property name="env.CLIENTNAME" value="Console"/>
+    <property name="jdbc.schema" value="SCHOOL"/>
+    <property name="env.TEMP" value="c:\DOCUME~1\ADMINI~1\LOCALS~1\Temp"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.endorsed.dirs" value="c:\development\jdk1.6.0_11\jre\lib\endorsed"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+    <property name="env.HOMEDRIVE" value="C:"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="env.SHLVL" value="1"/>
+    <property name="env.SYSTEMDRIVE" value="C:"/>
+    <property name="env.HOSTNAME" value="CORONA-WIN"/>
+    <property name="file.separator" value="\"/>
+    <property name="jdbc.username" value="school"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="env.J2D_D3D" value="false"/>
+    <property name="user.country" value="US"/>
+    <property name="env.PRINTER" value="HP PSC 2170 Series#:1"/>
+    <property name="java.home" value="c:\development\jdk1.6.0_11\jre"/>
+    <property name="env.APPDATA" value="C:\Documents and Settings\Administrator\Application Data"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="env.OS" value="Windows_NT"/>
+    <property name="os.version" value="5.1"/>
+    <property name="env.SYBASE_ASE" value="ASE-15_0"/>
+    <property name="env.SYBASE_WS" value="WS-15_0"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.version" value="11.0-b16"/>
+    <property name="env.DSLISTEN" value="CORONAWIN"/>
+    <property name="env.USERPROFILE" value="C:\Documents and Settings\Administrator"/>
+    <property name="user.variant" value=""/>
+    <property name="env.LIB" value="C:\sybase\DataAccess\ADONET\dll;C:\sybase\OCS-15_0\lib"/>
+    <property name="env.SYBASE_OCS" value="OCS-15_0"/>
+    <property name="env.JAVA_HOME" value="c:\development\jdk1.6.0_11"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="env.TERM" value="cygwin"/>
+    <property name="env.TMP" value="c:\DOCUME~1\ADMINI~1\LOCALS~1\Temp"/>
+    <property name="env.PROGRAMFILES" value="C:\Program Files"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="env.SCROOT" value="C:\sybase\Shared\Sybase Central 6.0.0"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="env.MANPATH" value="/usr/local/man:/usr/share/man:/usr/man::/usr/ssl/man"/>
+    <property name="user.home" value="C:\Documents and Settings\Administrator"/>
+    <property name="dbunit.password" value="school"/>
+    <property name="env.COMMONPROGRAMFILES" value="C:\Program Files\Common Files"/>
+    <property name="env.SESSIONNAME" value="Console"/>
+    <property name="env.OLDPWD" value="/cygdrive/c/development/workspace/school"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="java.library.path" value="c:\development\jdk1.6.0_11\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\development\apache-maven-2.1.0\bin;c:\development\jdk1.6.0_11\bin;C:\cygwin\usr\local\bin;C:\cygwin\bin;C:\cygwin\bin;C:\cygwin\usr\X11R6\bin;c:\sybase\DataAccess\ADONET\dll;c:\sybase\DataAccess\OLEDB\dll;c:\sybase\DataAccess\ODBC\dll;c:\sybase\ASE-15_0\jobscheduler\bin;c:\sybase\RPL-15_0\bin;c:\sybase\UAF-2_0\bin;c:\sybase\OCS-15_0\lib3p;c:\sybase\OCS-15_0\dll;c:\sybase\OCS-15_0\bin;c:\sybase\ASE-15_0\dll;c:\sybase\ASE-15_0\bin;c:\development\jdk1.6.0_11\bin;c:\development\apache-maven-2.1.0\bin;c:\oraclexe\app\oracle\product\10.2.0\server\bin;c:\WINDOWS\system32;c:\WINDOWS;c:\WINDOWS\System32\Wbem;c:\sybase\DBISQL\bin"/>
+    <property name="env.NUMBER_OF_PROCESSORS" value="2"/>
+    <property name="env.SYBASE_PLATFORM" value="windows"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="dbunit.connectionUrl" value="jdbc:oracle:thin:@///XE"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="maven.home" value="c:\development\apache-maven-2.1.0"/>
+    <property name="java.class.path" value="c:\development\apache-maven-2.1.0/boot/classworlds-1.1.jar"/>
+    <property name="env.DSQUERY" value="CORONAWIN"/>
+    <property name="env.CVS_RSH" value="/bin/ssh"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="env.LOGONSERVER" value="\\CORONA-WIN"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="env.PROCESSOR_ARCHITECTURE" value="x86"/>
+    <property name="sun.os.patch.level" value="Service Pack 3"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="env.HOME" value="C:\cygwin\home\Administrator"/>
+    <property name="surefire.test.class.path" value="C:\development\workspace\school\schoolDAO\target\test-classes;C:\development\workspace\school\schoolDAO\target\classes;C:\development\workspace\school\schoolBO\target\classes;C:\Documents and Settings\Administrator\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar;C:\Documents and Settings\Administrator\.m2\repository\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;C:\Documents and Settings\Administrator\.m2\repository\org\slf4j\slf4j-api\1.5.8\slf4j-api-1.5.8.jar;C:\Documents and Settings\Administrator\.m2\repository\org\slf4j\slf4j-log4j12\1.5.8\slf4j-log4j12-1.5.8.jar;C:\Documents and Settings\Administrator\.m2\repository\log4j\log4j\1.2.14\log4j-1.2.14.jar;C:\Documents and Settings\Administrator\.m2\repository\org\hibernate\hibernate-core\3.3.1.GA\hibernate-core-3.3.1.GA.jar;C:\Documents and Settings\Administrator\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Documents and Settings\Administrator\.m2\repository\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;C:\Documents and Settings\Administrator\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Documents and Settings\Administrator\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Documents and Settings\Administrator\.m2\repository\javax\transaction\jta\1.1\jta-1.1.jar;C:\Documents and Settings\Administrator\.m2\repository\org\hibernate\hibernate-entitymanager\3.4.0.GA\hibernate-entitymanager-3.4.0.GA.jar;C:\Documents and Settings\Administrator\.m2\repository\org\hibernate\ejb3-persistence\1.0.2.GA\ejb3-persistence-1.0.2.GA.jar;C:\Documents and Settings\Administrator\.m2\repository\org\hibernate\hibernate-commons-annotations\3.1.0.GA\hibernate-commons-annotations-3.1.0.GA.jar;C:\Documents and Settings\Administrator\.m2\repository\org\hibernate\hibernate-annotations\3.4.0.GA\hibernate-annotations-3.4.0.GA.jar;C:\Documents and Settings\Administrator\.m2\repository\javassist\javassist\3.4.GA\javassist-3.4.GA.jar;C:\Documents and Settings\Administrator\.m2\repository\org\apache\ibatis\ibatis-sqlmap\2.3.4.726\ibatis-sqlmap-2.3.4.726.jar;C:\Documents and Settings\Administrator\.m2\repository\com\oracle\ojdbc14\10.2.0.4.0\ojdbc14-10.2.0.4.0.jar;C:\Documents and Settings\Administrator\.m2\repository\org\springframework\spring\2.5.6.SEC01\spring-2.5.6.SEC01.jar;C:\Documents and Settings\Administrator\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Documents and Settings\Administrator\.m2\repository\junit\junit\4.6\junit-4.6.jar;C:\Documents and Settings\Administrator\.m2\repository\org\dbunit\dbunit\2.4.5\dbunit-2.4.5.jar;C:\Documents and Settings\Administrator\.m2\repository\jmcarey\schoolBO\0.0.1-SNAPSHOT\schoolBO-0.0.1-SNAPSHOT-tests.jar;"/>
+    <property name="java.io.tmpdir" value="c:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\"/>
+    <property name="env.PROCESSOR_REVISION" value="0f06"/>
+    <property name="jdbc.url" value="jdbc:oracle:thin:@///XE"/>
+    <property name="dbunit.username" value="school"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="env.SYBASE_JRE6_32" value="C:\sybase\Shared\JRE-6_0_6_32BIT"/>
+    <property name="env.COMSPEC" value="C:\WINDOWS\system32\cmd.exe"/>
+    <property name="dbunit.driverClass" value="oracle.jdbc.OracleDriver"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.ext.dirs" value="c:\development\jdk1.6.0_11\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="user.dir" value="C:\development\workspace\school\schoolDAO"/>
+    <property name="env.MAVEN_HOME" value="C:\development\apache-maven-2.1.0"/>
+    <property name="jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+    <property name="env.SYBASE" value="C:\sybase"/>
+    <property name="env.INFOPATH" value="/usr/local/info:/usr/share/info:/usr/info:"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="env.SYBASE_UA" value="C:\sybase\UAF-2_0"/>
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH"/>
+    <property name="basedir" value="C:\development\workspace\school\schoolDAO"/>
+    <property name="env.USERNAME" value="Administrator"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="env.SYBROOT" value="C:\sybase"/>
+    <property name="env.USERDOMAIN" value="CORONA-WIN"/>
+    <property name="dbunit.schema" value="SCHOOL"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="env.SYBASE_JRE6" value="C:\sybase\Shared\JRE-6_0_6_32BIT"/>
+    <property name="env.PROCESSOR_LEVEL" value="6"/>
+  </properties>
+  <testcase time="0.187" classname="school.dao.hibernate.HibernateContactDAOTest" name="testCreateContact"/>
+  <testcase time="0.172" classname="school.dao.hibernate.HibernateContactDAOTest" name="testReadContact"/>
+  <testcase time="0.219" classname="school.dao.hibernate.HibernateContactDAOTest" name="testUpdateContact"/>
+  <testcase time="0.172" classname="school.dao.hibernate.HibernateContactDAOTest" name="testDeleteContact"/>
+  <testcase time="0.157" classname="school.dao.hibernate.HibernateContactDAOTest" name="testInvalidReadContact"/>
+  <testcase time="0.203" classname="school.dao.hibernate.HibernateContactDAOTest" name="testInvalidReadContactByLoad"/>
+</testsuite>

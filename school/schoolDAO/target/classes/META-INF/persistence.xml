@@ -1,0 +1,42 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+                       http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit name="schoolPU">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+        
+        <!-- needed because Contact class is not in this JAR -->
+        <class>school.bo.Contact</class>
+		
+		<properties>
+		
+		    <!-- 
+		      we can define the properties here or reference them in the 
+		      hibernate configuration
+		    -->
+		    <property name="hibernate.ejb.cfgfile" value="/META-INF/hibernate.cfg.xml"/>
+		
+		    <!-- stored in hibernate.cfg.xml file -->
+		    <!--
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+            <property name="hibernate.connection.username" value="school"/>
+            <property name="hibernate.connection.password" value="school"/>
+            <property name="hibernate.connection.url" value="jdbc:oracle:thin:@///XE"/>
+            
+            <property name="hibernate.current_session_context_class" value="thread"/>
+            
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            -->
+			<!--
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			-->
+			
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
